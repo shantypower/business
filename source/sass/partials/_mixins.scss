@@ -1,0 +1,15 @@
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin font-set($f-s: 18px, $l-h: 30px, $f-w: 700, $text-color: $black, $text-align: left) {
+  font-weight: $f-w;
+  font-size: $f-s;
+  line-height: $l-h;
+  font-family: "Roboto", "Arial", "Helvetica", sans-serif;
+  text-align: $text-align;
+  color: $text-color;
+}
