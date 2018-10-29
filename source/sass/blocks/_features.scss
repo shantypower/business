@@ -1,0 +1,62 @@
+.features {
+  background-color: $lightgrey;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    margin-top: 42px;
+    @include font-set (16px, 16px, bold, $blue, center);
+    width: 200px;
+  }
+
+  &__tabs {
+    @include list-reset;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  &__tab {
+    width: 80px;
+
+    &::before {
+      display: block;
+      content: "";
+      width: 60px;
+      height: 60px;
+      margin: 13px auto;
+      border-radius: 50%;
+    }
+
+    &--retail::before {
+      background: url("/img/sprites-features.png") no-repeat $blue;
+      background-position: -98px 7px;
+    }
+
+    &--wifi::before {
+      background: url("/img/sprites-features.png") no-repeat $blue;
+      background-position: -267px 7px;
+    }
+
+    &--callcenter::before {
+      background: url("/img/sprites-features.png") no-repeat $blue;
+      background-position: -46px 3px;
+    }
+
+    &--logistics::before {
+      background: url("/img/sprites-features.png") no-repeat $blue;
+      background-position: -389px 7px;
+    }
+  }
+
+  &__link {
+    display: block;
+    @include font-set(13px, 16px, 300, $darkgrey, center);
+  }
+}

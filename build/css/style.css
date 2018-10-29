@@ -480,3 +480,74 @@ input[type="radio"].visually-hidden {
       -webkit-transform: rotate(-135deg);
               transform: rotate(-135deg);
       right: 29px; }
+  .slider__indicators {
+    display: none; }
+
+.features {
+  background-color: #f0f2f9; }
+  .features__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .features__title {
+    margin-top: 42px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 16px;
+    font-family: "Roboto", "Arial", "Helvetica", sans-serif;
+    text-align: center;
+    color: #182a6f;
+    width: 200px; }
+  .features__tabs {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%; }
+  .features__tab {
+    width: 80px; }
+    .features__tab::before {
+      display: block;
+      content: "";
+      width: 60px;
+      height: 60px;
+      margin: 13px auto;
+      border-radius: 50%; }
+    .features__tab--retail::before {
+      background: url("/img/sprites-features.png") no-repeat #182a6f;
+      background-position: -98px 7px; }
+    .features__tab--wifi::before {
+      background: url("/img/sprites-features.png") no-repeat #182a6f;
+      background-position: -267px 7px; }
+    .features__tab--callcenter::before {
+      background: url("/img/sprites-features.png") no-repeat #182a6f;
+      background-position: -46px 3px; }
+    .features__tab--logistics::before {
+      background: url("/img/sprites-features.png") no-repeat #182a6f;
+      background-position: -389px 7px; }
+  .features__link {
+    display: block;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    font-family: "Roboto", "Arial", "Helvetica", sans-serif;
+    text-align: center;
+    color: #6e6e6e; }
