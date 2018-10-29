@@ -8,7 +8,7 @@
   }
 
   &__link {
-    @include font-set(18px, 47.47px, bold, $white, center);
+    @include font-set(18px, 47.47px, bold, $dirtywhite, center);
     display: block;
   }
 
@@ -21,7 +21,7 @@
     }
 
     &-description {
-      @include font-set(11px, 12.01px, 100, $white, center);
+      @include font-set(11px, 12.01px, 100, $dirtywhite, center);
       margin: 0;
     }
   }
@@ -37,7 +37,7 @@
     height: 15px;
     padding: 0;
     font-size: 0;
-    border: 3.5px solid $white;
+    border: 3.5px solid $dirtywhite;
     cursor: pointer;
     background-color: transparent;
     border-right: none;

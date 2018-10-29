@@ -598,6 +598,86 @@ input[type="radio"].visually-hidden {
     width: 272px;
     margin: 0 24px; }
 
+.news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 44px; }
+  .news__tabs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 170px; }
+  .news__tab {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 16px;
+    font-family: "Roboto", "Arial", "Helvetica", sans-serif;
+    text-align: left;
+    color: #263b82; }
+    .news__tab--active::after {
+      display: block;
+      content: "";
+      width: 100%;
+      height: 5px;
+      background-color: #fbf239; }
+  .news__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    overflow: hidden;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap; }
+  .news__item {
+    display: none; }
+    .news__item--active {
+      display: block; }
+  .news__wrapper {
+    padding: 19px 23px; }
+
+.article__title {
+  margin: 0; }
+  .article__title a {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Roboto", "Arial", "Helvetica", sans-serif;
+    text-align: left;
+    color: #263b82; }
+
+.article__description {
+  margin: 0;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Roboto", "Arial", "Helvetica", sans-serif;
+  text-align: left;
+  color: #353535; }
+
+.article__date {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: "Roboto", "Arial", "Helvetica", sans-serif;
+  text-align: left;
+  color: #353535;
+  opacity: 0.3; }
+
 .btn {
   display: block;
   padding: 12px 15px;
@@ -607,4 +687,4 @@ input[type="radio"].visually-hidden {
   line-height: 14px;
   font-family: "Roboto", "Arial", "Helvetica", sans-serif;
   text-align: center;
-  color: #eff2f9; }
+  color: #ffffff; }

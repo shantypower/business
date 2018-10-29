@@ -1,0 +1,19 @@
+.article {
+  &__title {
+    margin: 0;
+    a {
+      display: block;
+      @include font-set(16px, 24px, bold, $blue-btn, left);
+    }
+  }
+
+  &__description {
+    margin: 0;
+    @include font-set(14px, 18px, normal, $deepgrey, left);
+  }
+
+  &__date {
+    @include font-set(12px, 16px, normal, $deepgrey,left);
+    opacity: 0.3;
+  }
+}
