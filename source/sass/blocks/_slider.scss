@@ -1,0 +1,56 @@
+.slider {
+  position: relative;
+  background: url("/img/bg-mobile.jpg") #484a51;
+
+  &__title {
+    margin: 0;
+    margin-bottom: -15px;
+  }
+
+  &__link {
+    @include font-set(18px, 47.47px, bold, $white, center);
+    display: block;
+  }
+
+  &__item {
+    display: none;
+    padding-bottom: 9px;
+
+    &:first-of-type {
+      display: block;
+    }
+
+    &-description {
+      @include font-set(11px, 12.01px, 100, $white, center);
+      margin: 0;
+    }
+  }
+
+  &__list {
+    @include list-reset;
+  }
+
+  &__btn {
+    position: absolute;
+    top: 21px;
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    font-size: 0;
+    border: 3.5px solid $white;
+    cursor: pointer;
+    background-color: transparent;
+    border-right: none;
+    border-top: none;
+
+    &:first-of-type {
+      transform: rotate(45deg);
+      left: 25px;
+    }
+
+    &:last-of-type {
+      transform: rotate(-135deg);
+      right: 29px;
+    }
+  }
+}

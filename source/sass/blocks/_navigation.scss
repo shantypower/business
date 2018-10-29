@@ -1,0 +1,26 @@
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px 21px 17px 14px;
+
+  &__logo {
+    width: 162px;
+    height: 39px;
+  }
+
+  &__button {
+    align-self: center;
+    width: 26px;
+    height: 20px;
+    padding: 0;
+    font-size: 0;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  &__menu {
+    display: none;
+  }
+}
