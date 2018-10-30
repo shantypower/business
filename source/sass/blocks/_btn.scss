@@ -4,4 +4,8 @@
   background-color: $blue-btn;
 
   @include font-set(13px, 14px, normal, $white, center);
+
+  &--news {
+    display: none;
+  }
 }

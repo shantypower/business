@@ -1,9 +1,11 @@
 .article {
   &__title {
     margin: 0;
+    margin-bottom: 5px;
+
     a {
       display: block;
-      @include font-set(16px, 24px, bold, $blue-btn, left);
+      @include font-set(16px, 20px, bold, $blue-btn, left);
     }
   }
 

@@ -1,6 +1,5 @@
 .slider {
   position: relative;
-  background: url("/img/bg-mobile.jpg") #484a51;
 
   &__title {
     margin: 0;
@@ -15,6 +14,8 @@
   &__item {
     display: none;
     padding-bottom: 9px;
+    background: url("/img/bg-mobile.jpg") no-repeat #484a51;
+    background-size: cover;
 
     &:first-of-type {
       display: block;

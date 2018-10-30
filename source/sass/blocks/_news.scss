@@ -38,6 +38,32 @@
   }
 
   &__wrapper {
-    padding: 19px 23px;
+    padding: 21px 23px;
+  }
+
+  &__indicators {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100px;
+
+    @include list-reset;
+  }
+
+  &__indicator {
+    width: 8px;
+    height: 8px;
+    margin-right: 15px;
+    background-color: $grey;
+    border-radius: 50%;
+    font-size: 0;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &--active {
+      background-color: $blue;
+    }
   }
 }
