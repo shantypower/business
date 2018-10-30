@@ -395,7 +395,7 @@ input[type="radio"].visually-hidden {
   background: url("css_sprites.png") -60px -10px; }
 
 .page-header {
-  width: 320px;
+  width: 100%;
   margin: 0 auto; }
 
 @media (min-width: 1072px) {
@@ -417,15 +417,30 @@ input[type="radio"].visually-hidden {
     width: 162px;
     height: 39px; }
   .navigation__button {
+    position: relative;
     -ms-flex-item-align: center;
         align-self: center;
     width: 26px;
     height: 20px;
     padding: 0;
     font-size: 0;
-    border: none;
+    border: 0;
     cursor: pointer;
     background-color: transparent; }
+    .navigation__button::after {
+      content: "";
+      position: absolute;
+      width: 24px;
+      top: 2px;
+      right: 2px;
+      height: 4px;
+      background-color: #263b82;
+      -webkit-box-shadow: 0 7px 0 0 #263b82, 0 14px 0 0 #263b82;
+              box-shadow: 0 7px 0 0 #263b82, 0 14px 0 0 #263b82; }
+    .navigation__button:hover::after {
+      background-color: #fbf239;
+      -webkit-box-shadow: 0 7px 0 0 #fbf239, 0 14px 0 0 #fbf239;
+              box-shadow: 0 7px 0 0 #fbf239, 0 14px 0 0 #fbf239; }
   .navigation__menu {
     display: none; }
 
@@ -485,8 +500,7 @@ input[type="radio"].visually-hidden {
     display: none; }
 
 .features {
-  background-color: #f0f2f9;
-  padding-bottom: 38px; }
+  background-color: #f0f2f9; }
   .features__header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -510,7 +524,7 @@ input[type="radio"].visually-hidden {
     font-family: "Roboto", "Arial", "Helvetica", sans-serif;
     text-align: center;
     color: #182a6f;
-    width: 200px; }
+    width: 60%; }
   .features__tabs {
     margin: 0;
     padding: 0;
@@ -527,7 +541,8 @@ input[type="radio"].visually-hidden {
     width: 100%; }
   .features__tab {
     position: relative;
-    width: 80px; }
+    width: 80px;
+    cursor: pointer; }
     .features__tab--active::after {
       content: "";
       position: absolute;
@@ -624,8 +639,9 @@ input[type="radio"].visually-hidden {
     .features__content--active {
       display: block; }
   .features__wrapper {
-    width: 272px;
-    margin: 0 auto; }
+    width: 86%;
+    margin: 0 auto;
+    padding-bottom: 38px; }
 
 .news {
   display: -webkit-box;
@@ -654,7 +670,7 @@ input[type="radio"].visually-hidden {
     font-family: "Roboto", "Arial", "Helvetica", sans-serif;
     text-align: left;
     color: #263b82; }
-    .news__tab--active::after {
+    .news__tab--active::after, .news__tab:hover::after {
       display: block;
       content: "";
       width: 100%;
@@ -736,11 +752,11 @@ input[type="radio"].visually-hidden {
 
 .modal {
   position: absolute;
+  display: none;
   top: 0;
   right: 0;
   left: 0;
   z-index: 2;
-  display: block;
   padding: 32px 25px;
   background-color: #ffffff; }
   .modal__btn {
@@ -923,7 +939,8 @@ input[type="radio"].visually-hidden {
 .btn {
   display: block;
   padding: 12px 15px;
-  background-color: #263b82;
+  margin: 0 auto;
+  background-color: transparent;
   font-weight: normal;
   font-size: 13px;
   line-height: 14px;
@@ -940,6 +957,14 @@ input[type="radio"].visually-hidden {
     padding-bottom: 25px;
     -ms-flex-item-align: center;
         align-self: center; }
+  .btn--features {
+    width: 240px;
+    border: 2px solid #123885;
+    color: #123885;
+    cursor: pointer; }
+    .btn--features:hover {
+      background-color: #263b82;
+      color: #ffffff; }
 
 .form {
   display: -webkit-box;

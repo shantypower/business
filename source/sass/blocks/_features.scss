@@ -1,6 +1,5 @@
 .features {
   background-color: $lightgrey;
-  padding-bottom: 38px;
 
   &__header {
     display: flex;
@@ -13,7 +12,7 @@
   &__title {
     margin-top: 42px;
     @include font-set (16px, 16px, bold, $blue, center);
-    width: 200px;
+    width: 60%;
   }
 
   &__tabs {
@@ -27,6 +26,7 @@
   &__tab {
     position: relative;
     width: 80px;
+    cursor: pointer;
 
     &--active::after {
       content: "";
@@ -147,7 +147,8 @@
   }
 
   &__wrapper {
-    width: 272px;
+    width: 86%;
     margin: 0 auto;
+    padding-bottom: 38px;
   }
 }

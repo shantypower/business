@@ -13,7 +13,8 @@
   &__tab {
     @include font-set(16px, 16px, bold, $blue-btn);
 
-    &--active::after {
+    &--active::after,
+    &:hover::after {
       display: block;
       content: "";
       width: 100%;

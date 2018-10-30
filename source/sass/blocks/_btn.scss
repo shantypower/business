@@ -1,7 +1,9 @@
 .btn {
   display: block;
   padding: 12px 15px;
-  background-color: $blue-btn;
+  margin: 0 auto;
+  background-color: transparent;
+
 
   @include font-set(13px, 14px, normal, $white, center);
 
@@ -16,5 +18,17 @@
     padding-top: 25px;
     padding-bottom: 25px;
     align-self: center;
+  }
+
+  &--features {
+    width: 240px;
+    border: 2px solid #123885;
+    color: #123885;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $blue-btn;
+      color: $white;
+    }
   }
 }
