@@ -140,7 +140,7 @@
       <div class="features__content features__content--active">
         <div class="features__details">
           <h3 class="features__subtitle">
-              <a href="#"><mark class="features__highlight-text">Удобный интернет-серфинг в общественных местах</mark></a>
+            <a href="#"><mark class="features__highlight-text">Удобный интернет-серфинг в общественных местах</mark></a>
           </h3>
           <div class="features__wrapper">
             <p class="features__description">Зоны свободного доступа в интернет для посетителей кафе, ресторанов,
@@ -214,7 +214,7 @@
     </section>
   </main>
   <div class="overlay"></div>
-  <div class="modal modal--profile">
+  <div class="modal modal--profile" style="display: none;">
     <div class="modal__header">
       <button class="modal__btn"><span>Закрыть</span></button>
       <h2 class="modal__title">Личный кабинет</h2>
@@ -238,18 +238,18 @@
       <button class="form__btn btn btn--profile" type="submit">Авторизоваться</button>
     </form>
   </div>
-  <div class="modal modal--feedback" style="display: none;">
+  <div class="modal modal--feedback">
     <div class="modal__header">
       <button class="modal__btn"><span>Закрыть</span></button>
       <h2 class="modal__title">Обратная связь</h2>
-      <span class="modal__help" data-hint="После обработки сообщения, с Вами свяжется наш менеджер" tabindex="0">?</span>
+      <span class="modal__help">После обработки сообщения, с Вами свяжется наш менеджер</span>
       <div class="modal__tabs">
         <a class="modal__tab" href="#">Частный клиент</a>
         <a class="modal__tab modal__tab--active" href="#">Юридическое лицо</a>
         <a class="modal__tab" href="#">Промо-офис</a>
       </div>
     </div>
-    <form class="form" action="#" method="post">
+    <form class="form" action="#" method="post" style="display: none;">
       Форма для частных клиентов
     </form>
     <form class="form form--active" action="#" method="post">
@@ -257,22 +257,26 @@
         <input class="form__input form__input--name" type="text" name="name" placeholder="Фамилия, Имя, Отчество"
           required>
         <input class="form__input form__input--tel" type="tel" name="phone" placeholder="Номер телефона" required>
-        <input class="form__input form__input--email" type="email" name="email" placeholder="Email" required>
+        <input class="form__input form__input--email" type="email" name="email" placeholder="Электронная почта"
+          required>
       </div>
       <div class="form__fieldset form__fieldset--address">
         <span class="form__label">Адрес подключения услуги</span>
         <div class="select select--city">
-          <span class="select__value  select__value--yellow">Выберите город</span>
+          <span class="select__value  select__value--highlight">Выберите город</span>
           <ul class="select__list">
             <li class="select__item" data-value="city1">Санкт-Петербург</li>
             <li class="select__item" data-value="city2">Москва</li>
             <li class="select__item" data-value="city3">Краснодар</li>
           </ul>
-          <input type="visually-hidden" name="city">
+          <input type="hidden" name="city">
         </div>
         <input class="form__input form__input--street" type="text" name="street" placeholder="Улица" required>
-        <input class="form__input  form__input--house" type="text" name="house" placeholder="Номер дома" required>
-        <input class="form__input  form__input--apartment" type="text" name="apartment" placeholder="Квартира" required>
+        <div class="form__input-group form__input-group--half">
+          <input class="form__input  form__input--short" type="text" name="house" placeholder="Номер дома" required>
+          <input class="form__input  form__input--short" type="text" name="apartment" placeholder="Квартира"
+            required>
+        </div>
       </div>
       <div class="form__fieldset form__fieldset--message">
         <span class="form__label">Тип обращения</span>
@@ -283,7 +287,7 @@
             <li class="select__item" data-value="survice2">Телефония</li>
             <li class="select__item" data-value="survice3">Каналы передачи данных</li>
           </ul>
-          <input type="visually-hidden" name="type">
+          <input type="hidden" name="type">
         </div>
       </div>
       <div class="form__fieldset form__fieldset--message">
@@ -295,7 +299,7 @@
             <li class="select__item" data-value="topic2">Отзывы и предложения</li>
             <li class="select__item" data-value="topic3">Коммерческое предложение</li>
           </ul>
-          <input type="visually-hidden" name="topic">
+          <input type="hidden" name="topic">
         </div>
       </div>
       <textarea class="form__input form__input--message" name="message" placeholder="Текст обращения"></textarea>
@@ -304,7 +308,7 @@
         <button type="submit" class="btn btn--feedback">Отправить</button>
       </div>
     </form>
-    <form class="form" action="#" method="post">
+    <form class="form" action="#" method="post" style="display: none;">
       Форма для промо-офисов
     </form>
   </div>

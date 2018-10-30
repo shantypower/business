@@ -1,0 +1,51 @@
+.select {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-bottom: 18px;
+
+  &__value {
+    position: relative;
+    margin: 0;
+    padding: 20px 35px 20px 17px;
+    @include font-set(14px, 14px, 300, #b3b3b3, left);
+    background-color: $white;
+    border: 0;
+    cursor: pointer;
+
+    &--highlight {
+      background-color: $yellow;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 25px;
+      right: 17px;
+      width: 5px;
+      height: 5px;
+      border: 0;
+      border-top: 2px solid $black;
+      border-left: 2px solid $black;
+      transform: rotate(135deg);
+    }
+  }
+
+  &__list {
+    z-index: 1;
+    display: none;
+
+    @include list-reset;
+    box-shadow: 0 6px 7px 1px rgba(63, 120, 235, 0.3);
+  }
+
+  &__item {
+    @include font-set(16px, 24px, 500, $black, left);
+    padding: 13px 15px 13px 18px;
+    background-color: $white;
+
+    &:hover {
+      background-color: $yellow;
+    }
+  }
+}
