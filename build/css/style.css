@@ -734,6 +734,88 @@ input[type="radio"].visually-hidden {
   color: #353535;
   opacity: 0.3; }
 
+.modal {
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  display: block;
+  padding: 32px 25px;
+  background-color: #ffffff; }
+  .modal__btn {
+    position: absolute;
+    top: 30px;
+    left: 28px;
+    z-index: 1;
+    display: block;
+    width: 26px;
+    height: 22px;
+    font-size: 0;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer; }
+    .modal__btn::before {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 0;
+      width: 15px;
+      height: 15px;
+      border-bottom: 1px solid #688cd6;
+      border-left: 1px solid #688cd6;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg); }
+    .modal__btn::after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: -2px;
+      width: 26px;
+      height: 1px;
+      background-color: #688cd6; }
+  .modal__title {
+    margin: 0;
+    padding-left: 41px;
+    margin-bottom: 34px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    font-family: "Roboto", "Arial", "Helvetica", sans-serif;
+    text-align: left;
+    color: #123885; }
+  .modal__tabs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    min-height: 32px;
+    margin: 0; }
+  .modal__tab {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    border: 1px solid #97adef;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    font-family: "Roboto", "Arial", "Helvetica", sans-serif;
+    text-align: center;
+    color: #263b82; }
+    .modal__tab--active, .modal__tab:hover {
+      color: #ffffff;
+      background-color: #263b82;
+      border-color: #263b82; }
+    .modal__tab:first-child {
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px; }
+    .modal__tab:last-child {
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px; }
+  .modal__header {
+    margin-bottom: 29px; }
+
 .btn {
   display: block;
   padding: 12px 15px;

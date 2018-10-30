@@ -1,0 +1,94 @@
+.modal {
+
+  //position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  display: block;
+  padding: 32px 25px;
+  background-color: $white;
+
+  &__btn {
+    position: absolute;
+    top: 30px;
+    left: 28px;
+    z-index: 1;
+    display: block;
+    width: 26px;
+    height: 22px;
+    font-size: 0;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 0;
+      width: 15px;
+      height: 15px;
+      border-bottom: 1px solid #688cd6;
+      border-left: 1px solid #688cd6;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: -2px;
+      width: 26px;
+      height: 1px;
+      background-color: #688cd6;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    padding-left: 41px;
+    margin-bottom: 34px;
+
+    @include font-set(16px, 16px, 500, #123885, left);
+  }
+
+  &__tabs {
+    display: flex;
+    width: 100%;
+    min-height: 32px;
+    margin: 0;
+  }
+
+  &__tab {
+    flex-grow: 1;
+    border: 1px solid #97adef;
+    cursor: pointer;
+    padding: 10px 15px;
+
+    @include font-set(12px, 12px, normal, $blue-btn, center);
+
+    &--active,
+    &:hover {
+      color: $white;
+      background-color: $blue-btn;
+      border-color: $blue-btn;
+    }
+
+    &:first-child {
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+
+    &:last-child {
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+  }
+
+  &__header {
+    margin-bottom: 29px;
+  }
+
+  
+}
