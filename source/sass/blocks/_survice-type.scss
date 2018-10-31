@@ -1,12 +1,14 @@
 .survice-type {
   display: flex;
   flex-wrap: wrap;
-  margin: 20px 23px;
+  margin: 20px 0;
+  margin-bottom: 34px;
 
   &__item {
     margin-right: 18px;
+
     @include font-set(16px, 16px, 500, $white);
-    opacity: 0.3;
+    opacity: 0.2;
 
     &--active {
       opacity: 1;

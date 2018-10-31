@@ -1,0 +1,87 @@
+.main-nav {
+  position: relative;
+  @include list-reset;
+  display: none;
+
+  &--active {
+    display: block;
+
+    .main-nav__item::after {
+      top: 18px;
+      transform: rotate(-135deg);
+      border-color: $yellow;
+    }
+  }
+
+  &__item {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(245, 245, 245, 0.2);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 11px;
+      right: 0;
+      width: 18px;
+      height: 18px;
+      background-color: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 16px;
+      right: 7px;
+      width: 5px;
+      height: 5px;
+      background-color: transparent;
+      border: 1.5px solid $white;
+      border-top: none;
+      border-left: none;
+      transform: rotate(45deg);
+    }
+
+    &:hover::before {
+      border-color: $yellow;
+    }
+
+    &:hover .main-nav__item-link {
+      color: $yellow;
+    }
+  }
+
+  &__item-link {
+    box-sizing: border-box;
+    display: block;
+
+    @include font-set(16px, 24px, 500, $white, left);
+    margin-bottom: 2px;
+    padding: 1px 0;
+
+    &--dropdown ~ .main-nav__item-list {
+      display: block;
+    }
+  }
+
+  &__item-list {
+    box-sizing: border-box;
+    display: none;
+
+    @include list-reset;
+    margin-bottom: 16px;
+  }
+
+  &__subitem a {
+    display: block;
+
+    @include font-set(14px, 26px, normal, $white, left);
+    opacity: 0.2;
+
+    &:hover {
+      color: $yellow;
+      opacity: 0.8;
+    }
+  }
+}

@@ -14,6 +14,7 @@
     right: 0;
     left: 25px;
     z-index: 1;
+    padding: 0 22px;
     min-height: 100vh;
     background-color: #123885;
   }
@@ -35,6 +36,12 @@
       width: 31px;
       height: 2px;
       background-color: #82a2e0;
+      box-shadow: none;
+    }
+
+    &:hover::after,
+    &:hover::before {
+      background-color: $yellow;
       box-shadow: none;
     }
 
