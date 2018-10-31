@@ -2,7 +2,12 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  order: 5;
   margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    order: 1;
+  }
 
   &__address {
     margin-bottom: 7px;
@@ -10,6 +15,10 @@
 
     @include font-set(14px, 19px, 900, $white, left);
     text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+      color: $black;
+    }
 
     &::after {
       content: "";

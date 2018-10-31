@@ -2,6 +2,11 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
+  order: 4;
+
+  @media (min-width: $tablet-width) {
+    order: 3;
+  }
 
   @include list-reset;
   margin-bottom: 20px;

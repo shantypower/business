@@ -20,6 +20,16 @@
     margin-top: 15px;
     min-height: 100vh;
     background-color: #123885;
+
+    @media (min-width: $tablet-width) {
+      flex-direction: row;
+      flex-grow: 1;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      background-color: $white;
+      position: relative;
+      min-height: 75px;
+    }
   }
 
   &--opened .navigation__button {
@@ -64,6 +74,11 @@
   &__logo {
     width: 162px;
     height: 39px;
+
+    @media (min-width: $tablet-width) {
+      width: 198px;
+      height: 47px;
+    }
   }
 
   &__button {
@@ -76,6 +91,10 @@
     border: 0;
     cursor: pointer;
     background-color: transparent;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
 
     &::after {
       content: "";

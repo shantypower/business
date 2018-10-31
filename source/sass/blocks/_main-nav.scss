@@ -1,11 +1,27 @@
 .main-nav {
   position: relative;
+
   @include list-reset;
   display: none;
   margin-bottom: 23px;
 
+  @media (min-width: $tablet-width) {
+    background-color: $blue;
+  }
+
   &--active {
     display: block;
+    order: 2;
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      width: 100%;
+      bottom: -42px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      order: 4;
+    }
 
     .main-nav__item::after {
       top: 18px;
@@ -17,6 +33,10 @@
   &__item {
     padding: 8px 0;
     border-bottom: 1px solid rgba(245, 245, 245, 0.2);
+
+    @media (min-width: $tablet-width) {
+      margin-right: 25px;
+    }
 
     &::before {
       content: "";
@@ -61,8 +81,16 @@
     margin-bottom: 2px;
     padding: 1px 0;
 
+    @media (min-width: $tablet-width) {
+      font-size: 15px;
+    }
+
     &--dropdown ~ .main-nav__item-list {
       display: block;
+
+      @media (min-width: $tablet-width) {
+        display: none;
+      }
     }
   }
 

@@ -2,9 +2,14 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
+  order: 3;
 
   @include list-reset;
   margin-bottom: auto;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 
   &__item:not(:first-of-type) {
     padding-left: 11px;
