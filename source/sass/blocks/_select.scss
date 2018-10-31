@@ -8,6 +8,7 @@
     position: relative;
     margin: 0;
     padding: 20px 35px 20px 17px;
+
     @include font-set(14px, 14px, 300, #b3b3b3, left);
     background-color: $white;
     border: 0;

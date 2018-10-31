@@ -5,12 +5,14 @@
 
     a {
       display: block;
+
       @include font-set(16px, 19px, bold, $blue-btn, left);
     }
   }
 
   &__description {
     margin: 0;
+
     @include font-set(14px, 18px, normal, $deepgrey, left);
   }
 
