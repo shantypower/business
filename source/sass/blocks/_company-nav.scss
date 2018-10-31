@@ -1,3 +1,25 @@
 .company-nav {
+  display: flex;
+  flex-wrap: wrap;
+
   @include list-reset;
+
+  &__item:not(:first-of-type) {
+    padding-left: 11px;
+  }
+
+  &__item:nth-of-type(4n) {
+    padding-left: 0;
+  }
+
+  &__item a {
+    display: block;
+    padding-right: 9px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-right: 1px solid rgba(255, 255, 255, 0.8);
+
+    @include font-set(14px, 14px, normal, $white, left);
+    opacity: 0.3;
+  }
 }
