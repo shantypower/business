@@ -17,6 +17,7 @@
     left: 25px;
     z-index: 1;
     padding: 0 22px;
+    margin-top: 15px;
     min-height: 100vh;
     background-color: #123885;
   }
@@ -56,6 +57,10 @@
     }
   }
 
+  &__no-js .navigation__menu {
+    position: relative;
+  }
+
   &__logo {
     width: 162px;
     height: 39px;
@@ -87,6 +92,19 @@
       background-color: $yellow;
       box-shadow: 0 7px 0 0 $yellow, 0 14px 0 0 $yellow;
     }
+  }
+}
+
+.navigation.navigation__no-js {
+  flex-direction: column;
+  padding: 10px 0;
+
+  .navigation__menu {
+    left: 0;
+  }
+
+  .navigation__button {
+    display: none;
   }
 }
 
