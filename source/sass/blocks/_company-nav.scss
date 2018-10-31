@@ -3,6 +3,7 @@
   flex-wrap: wrap;
 
   @include list-reset;
+  margin-bottom: auto;
 
   &__item:not(:first-of-type) {
     padding-left: 11px;
@@ -21,5 +22,10 @@
 
     @include font-set(14px, 14px, normal, $white, left);
     opacity: 0.3;
+
+    &:hover {
+      color: $yellow;
+      opacity: 1;
+    }
   }
 }
