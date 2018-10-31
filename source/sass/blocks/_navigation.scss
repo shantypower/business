@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 16px 21px 17px 14px;
+  padding: 16px 21px 16px 14px;
 
   &__logo {
     width: 162px;
@@ -23,9 +23,9 @@
     &::after {
       content: "";
       position: absolute;
-      width: 24px;
+      width: 23px;
       top: 2px;
-      right: 2px;
+      right: 1px;
       height: 4px;
       background-color: #263b82;
       box-shadow: 0 7px 0 0 #263b82, 0 14px 0 0 #263b82;
