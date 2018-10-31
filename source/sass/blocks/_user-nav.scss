@@ -1,8 +1,10 @@
 .user-nav {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
 
   @include list-reset;
+  margin-bottom: 20px;
 
   &__item {
     width: 30px;

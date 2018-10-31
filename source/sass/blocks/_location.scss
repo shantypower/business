@@ -1,0 +1,31 @@
+.location {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &__address {
+    margin-bottom: 7px;
+    padding-right: 13px;
+
+    @include font-set(14px, 19px, 900, $white, left);
+    text-transform: uppercase;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-right: 2px solid $white;
+      border-bottom: 2px solid $white;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__tel {
+    @include font-set(14px, 19px, 300, $white, left);
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+}
