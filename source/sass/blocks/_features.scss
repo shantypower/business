@@ -1,5 +1,19 @@
 .features {
-  background-color: $lightgrey;
+  position: relative;
+  background-color: $grey;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 57px;
+  }
+
+  &__details {
+    @media (min-width: $desktop-width) {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      margin-left: 37px;
+    }
+  }
 
   &__header {
     display: flex;
@@ -7,6 +21,21 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 19px;
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      top: -113px;
+      right: 0;
+      left: 0;
+      padding-bottom: 29px;
+      width: $tablet-width;
+      margin: 0 auto;
+      background-color: $white;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: $desktop-width;
+    }
   }
 
   &__title {
@@ -14,6 +43,22 @@
 
     @include font-set (16px, 16px, bold, $blue, center);
     width: 60%;
+
+    br {
+      direction: none;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 27px;
+      padding-top: 10px;
+      padding-right: 13%;
+      padding-left: 13%;
+      width: 65%;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 36px;
+      color: #002672;
+    }
   }
 
   &__tabs {
@@ -22,12 +67,23 @@
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
+
+    @media (min-width: $desktop-width) {
+      width: 91%;
+      margin: 0 auto;
+    }
   }
 
   &__tab {
     position: relative;
     width: 80px;
     cursor: pointer;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      align-items: center;
+      width: auto;
+    }
 
     &--active::after {
       content: "";
@@ -100,6 +156,13 @@
     display: block;
 
     @include font-set(13px, 16px, 300, $darkgrey, center);
+
+    @media (min-width: $tablet-width) {
+      font-size: 18px;
+      line-height: 40px;
+      margin-left: 17px;
+      border-bottom: 1px dotted #c9c9c9;
+    }
   }
 
   &__subtitle {
@@ -110,17 +173,34 @@
     background-size: 100%;
 
     @media (min-width: $desktop-width) {
-      background: url("/img/bg-features-desktop.jpg") no-repeat;
+      background: none;
+      padding-left: 6px;
+      padding-top: 26px;
+      padding-bottom: 2px;
     }
 
     a {
-      @include font-set (20px, 24px, 500, $blue-text, left);
+      @include font-set (20px, 24px, 500, #123885, left);
+
+      mark {
+        color: #123885;
+      }
+
+      @media (min-width: $tablet-width) {
+        font-size: 34px;
+        line-height: 34px;
+        font-weight: bold;
+      }
     }
   }
 
   &__highlight-text {
     background-color: $yellow;
     box-shadow: 7px 1px 0 5px $yellow, -4px 1px 0 5px $yellow;
+
+    @media (min-width: $tablet-width) {
+      box-shadow: 13px 0 0 0 #fbf239, -10px 0 0 0 #fbf239;
+    }
   }
 
   &__description {
@@ -128,14 +208,44 @@
     padding: 18px 20px 23px 0;
 
     @include font-set (14px, 18px, 300, $deepgrey, left);
+
+    @media (min-width: $tablet-width) {
+      font-size: 16px;
+      line-height: 20px;
+      padding-bottom: 27px;
+    }
   }
 
   &__content {
     display: none;
-    background-color: $grey;
+
+    @media (min-width: $desktop-width) {
+      width: $desktop-width;
+      margin: 0 auto;
+    }
+
+    @media (min-width: $tablet-width) {
+      &::before {
+        box-sizing: border-box;
+        display: block;
+        content: "";
+        width: 297px;
+        height: 297px;
+        border: 12px solid $dirtywhite;
+        border-radius: 50%;
+        background: url("/img/bg-features-desktop.jpg") no-repeat center;
+      }
+    }
 
     &--active {
       display: block;
+
+      @media (min-width: $tablet-width) {
+        display: flex;
+        width: 100%;
+        padding-top: 215px;
+        padding-left: 173px;
+      }
     }
   }
 
@@ -143,5 +253,13 @@
     width: 86%;
     margin: 0 auto;
     padding-bottom: 38px;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      flex-direction: column;
+      width: 66%;
+      margin: 0;
+    }
   }
+
 }

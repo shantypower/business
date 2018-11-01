@@ -7,6 +7,13 @@
 
   @include font-set(13px, 14px, normal, $white, center);
 
+  @media (min-width: $tablet-width) {
+    padding: 17px 15px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: bold;
+  }
+
   &--news {
     display: none;
   }
@@ -21,10 +28,16 @@
   }
 
   &--features {
-    width: 240px;
+    min-width: 240px;
     border: 2px solid #123885;
     color: #123885;
     cursor: pointer;
+
+    @media (min-width: $tablet-width) {
+      min-width: 376px;
+      border-width: 3px;
+      margin-left: 0;
+    }
 
     &:hover {
       background-color: $blue-btn;
