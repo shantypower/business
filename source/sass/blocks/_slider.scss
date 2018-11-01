@@ -2,13 +2,21 @@
   position: relative;
 
   &__title {
+    display: flex;
+    justify-content: center;
     margin: 0;
     margin-bottom: -13px;
   }
 
   &__link {
     @include font-set(18px, 47.47px, bold, $dirtywhite, center);
-    display: block;
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 12px;
+      font-size: 83.45px;
+      line-height: 67.06px;
+      border-bottom: 1px solid $dirtywhite;
+    }
   }
 
   &__item {
@@ -18,6 +26,8 @@
     background-size: cover;
 
     @media (min-width: $tablet-width) {
+      padding-top: 147px;
+      padding-bottom: 329px;
       background: url("/img/bg-desktop.jpg") no-repeat #484a51;
     }
 
@@ -28,6 +38,12 @@
     &-description {
       @include font-set(11px, 12.01px, 100, $dirtywhite, center);
       margin: 0;
+
+      @media (min-width: $tablet-width) {
+        margin-top: 26px;
+        font-size: 21.31px;
+        line-height: 22.49px;
+      }
     }
   }
 
@@ -48,18 +64,64 @@
     border-right: none;
     border-top: none;
 
+    @media (min-width: $tablet-width) {
+      top: 220px;
+      width: 29px;
+      height: 29px;
+      border-width: 6px;
+    }
+
     &:first-of-type {
       transform: rotate(45deg);
       left: 25px;
+
+      @media (min-width: $tablet-width) {
+        left: 50px;
+      }
     }
 
     &:last-of-type {
       transform: rotate(-135deg);
       right: 29px;
+
+      @media (min-width: $tablet-width) {
+        right: 57px;
+      }
     }
   }
 
   &__indicators {
     display: none;
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      bottom: 218px;
+      left: 46%;
+
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__indicator {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 21px;
+
+    vertical-align: middle;
+
+    background-color: $white;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &--active {
+      width: 13px;
+      height: 13px;
+
+      background-color: transparent;
+      border: 3px solid #fff200;
+    }
   }
 }
