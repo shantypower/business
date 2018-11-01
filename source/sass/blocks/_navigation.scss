@@ -9,10 +9,10 @@
     justify-content: flex-end;
     flex-direction: row;
     width: $desktop-width;
-    min-height: 91px;
     padding-left: 0;
     padding-right: 0;
     padding-top: 16px;
+    padding-bottom: 0;
     margin: 0 auto;
   }
 
@@ -40,7 +40,7 @@
       flex-wrap: wrap;
       justify-content: flex-end;
       background-color: $white;
-      min-height: 113px;
+      min-height: 105px;
       margin-top: 0;
     }
   }
