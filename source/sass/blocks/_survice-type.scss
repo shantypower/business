@@ -7,6 +7,9 @@
 
   @media (min-width: $tablet-width) {
     order: 2;
+    margin: 0;
+    margin-top: 11px;
+    margin-right: 123px;
   }
 
   &__item {
@@ -15,12 +18,26 @@
     @include font-set(16px, 16px, 500, $white);
     opacity: 0.2;
 
+    @media (min-width: $tablet-width) {
+      @include font-set(20px, 20px, bold, #686767);
+      opacity: 0.8;
+      margin-right: 21px;
+    }
+
     &--active {
       opacity: 1;
+
+      @media (min-width: $tablet-width) {
+        color: $blue;
+      }
     }
 
     &:hover {
       opacity: 1;
+
+      @media (min-width: $tablet-width) {
+        color: $blue;
+      }
     }
 
     &--active::after,

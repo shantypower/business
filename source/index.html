@@ -11,7 +11,7 @@
 <body>
   <header class="page-header">
     <h1 class="visually-hidden">Просто телеком - оператор связи</h1>
-    <div class="navigation navigation--opened">
+    <nav class="navigation navigation--opened navigation__no-js">
       <div class="navigation__logo">
         <a title="Главная страница">
           <picture>
@@ -21,7 +21,8 @@
         </a>
       </div>
       <button class="navigation__button" type="button">Меню</button>
-      <nav class="navigation__menu">
+      <div class="navigation__menu">
+
         <div class="survice-type">
           <a href="#" class="survice-type__item">Для дома</a>
           <a href="#" class="survice-type__item survice-type__item--active">Для бизнеса</a>
@@ -94,7 +95,7 @@
           <a class="location__address" href="#">Санкт-Петербург</a>
           <a class="location__tel" href="tel:+7(812)3664040">+7 (812) 366 40 40</a>
         </div>
-      </nav>
+    </nav>
     </div>
   </header>
   <main>
@@ -281,8 +282,7 @@
         <input class="form__input form__input--street" type="text" name="street" placeholder="Улица" required>
         <div class="form__input-group form__input-group--half">
           <input class="form__input  form__input--short" type="text" name="house" placeholder="Номер дома" required>
-          <input class="form__input  form__input--short" type="text" name="apartment" placeholder="Квартира"
-            required>
+          <input class="form__input  form__input--short" type="text" name="apartment" placeholder="Квартира" required>
         </div>
       </div>
       <div class="form__fieldset form__fieldset--message">

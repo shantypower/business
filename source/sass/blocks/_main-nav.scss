@@ -14,13 +14,15 @@
     order: 2;
 
     @media (min-width: $tablet-width) {
-      position: absolute;
-      width: 100%;
-      bottom: -42px;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       order: 4;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100vw;
     }
 
     .main-nav__item::after {
@@ -36,6 +38,7 @@
 
     @media (min-width: $tablet-width) {
       margin-right: 25px;
+      padding: 7px 0;
     }
 
     &::before {
@@ -48,6 +51,10 @@
       background-color: transparent;
       border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 50%;
+
+      @media (min-width: $tablet-width) {
+        display: none;
+      }
     }
 
     &::after {
@@ -62,6 +69,10 @@
       border-top: none;
       border-left: none;
       transform: rotate(45deg);
+
+      @media (min-width: $tablet-width) {
+        display: none;
+      }
     }
 
     &:hover::before {

@@ -1,8 +1,20 @@
 .navigation {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   padding: 16px 21px 16px 14px;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+    flex-direction: row;
+    width: $desktop-width;
+    min-height: 91px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 16px;
+    margin: 0 auto;
+  }
 
   &--closed .navigation__menu {
     display: none;
@@ -22,13 +34,14 @@
     background-color: #123885;
 
     @media (min-width: $tablet-width) {
+      position: initial;
       flex-direction: row;
       flex-grow: 1;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: flex-end;
       background-color: $white;
-      position: relative;
-      min-height: 75px;
+      min-height: 113px;
+      margin-top: 0;
     }
   }
 
@@ -67,8 +80,9 @@
     }
   }
 
-  &__no-js .navigation__menu {
-    position: relative;
+
+  &__no-js .navigation__button {
+    display: none;
   }
 
   &__logo {
@@ -78,6 +92,7 @@
     @media (min-width: $tablet-width) {
       width: 198px;
       height: 47px;
+      margin-left: 25px;
     }
   }
 
@@ -116,7 +131,10 @@
 
 .navigation.navigation__no-js {
   flex-direction: column;
-  padding: 10px 0;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
 
   .navigation__menu {
     left: 0;
