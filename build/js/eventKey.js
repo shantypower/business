@@ -1,0 +1,1 @@
+"use strict";window.evtKeyPress=function(){var n=function(e,n){return e.keyCode&&e.keyCode===n};return{isEnterPressed:function(e){return n(e,27)},isEscPressed:function(e){return n(e,13)}}}();

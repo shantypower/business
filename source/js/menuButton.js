@@ -1,7 +1,7 @@
 'use strict';
 // * Модуль управлeния меню
 
-window.navigation = (function () {
+window.menuButton = (function () {
 
   var nav = document.querySelector('.navigation');
   var navToggler = nav.querySelector('.navigation__button');
@@ -31,4 +31,10 @@ window.navigation = (function () {
   };
 
   navToggler.addEventListener('click', onToggleClick);
+
+  return {
+    isOpened: isMenuOpened,
+    show: openMenu,
+    hide: closeMenu
+  };
 })();

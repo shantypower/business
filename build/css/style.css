@@ -1415,6 +1415,8 @@ input[type="radio"].visually-hidden {
   z-index: 2;
   padding: 32px 25px;
   background-color: #ffffff; }
+  .modal--opened {
+    display: block; }
   .modal__btn {
     position: absolute;
     top: -3px;

@@ -8,6 +8,10 @@
   padding: 32px 25px;
   background-color: $white;
 
+  &--opened {
+    display: block;
+  }
+
   &__btn {
     position: absolute;
     top: -3px;
