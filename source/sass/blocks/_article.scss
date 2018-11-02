@@ -3,6 +3,10 @@
     margin: 0;
     margin-bottom: 6px;
 
+    @media (min-width: $tablet-width) {
+      margin-bottom: 13px;
+    }
+
     a {
       display: block;
 
@@ -22,6 +26,7 @@
     @include font-set(14px, 18px, normal, $deepgrey, left);
 
     @media (min-width: $tablet-width) {
+      margin-bottom: 7px;
       font-weight: 300;
       font-size: 16px;
       line-height: 22px;

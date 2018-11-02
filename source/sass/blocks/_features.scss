@@ -3,7 +3,7 @@
   background-color: $grey;
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 57px;
+    padding-bottom: 61px;
   }
 
   &__details {
@@ -11,7 +11,7 @@
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
-      margin-left: 40px;
+      margin-left: 43px;
     }
   }
 
@@ -49,7 +49,7 @@
     }
 
     @media (min-width: $tablet-width) {
-      margin-bottom: 27px;
+      margin-bottom: 26px;
       padding-top: 10px;
       padding-right: 13%;
       padding-left: 13%;
@@ -69,7 +69,8 @@
     width: 100%;
 
     @media (min-width: $desktop-width) {
-      width: 91%;
+      justify-content: space-between;
+      width: 86%;
       margin: 0 auto;
     }
   }
@@ -83,6 +84,20 @@
       display: flex;
       align-items: center;
       width: auto;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: 53px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &--active .features__link {
+      color: #123885;
+      border: none;
+      line-height: 18px;
     }
 
     &--active::after {
@@ -241,6 +256,7 @@
         width: 295px;
         height: 295px;
         margin-left: 64px;
+        margin-right: 8px;
         border: 12px solid $dirtywhite;
         border-radius: 50%;
         background: url("/img/bg-features-desktop.jpg") no-repeat center;

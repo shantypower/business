@@ -37,7 +37,12 @@
 
     @media (min-width: $tablet-width) {
       margin-right: 25px;
-      padding: 7px 0;
+      padding-top: 9px;
+      padding-bottom: 5px;
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
 
     &::before {
