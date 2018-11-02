@@ -67,6 +67,10 @@
     border-right: none;
     border-top: none;
 
+    &:hover {
+      border-color: $yellow;
+    }
+
     @media (min-width: $tablet-width) {
       top: 220px;
       width: 29px;

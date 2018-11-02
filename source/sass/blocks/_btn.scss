@@ -3,19 +3,28 @@
   padding: 12px 15px;
   margin: 0 auto;
   background-color: transparent;
+  border: 2px solid #123885;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $blue-btn;
+    color: $white;
+  }
 
 
-  @include font-set(13px, 14px, normal, $white, center);
+  @include font-set(13px, 14px, normal, #123885, center);
 
   @media (min-width: $tablet-width) {
     padding: 17px 15px;
     font-size: 18px;
     line-height: 22px;
     font-weight: bold;
+    border-width: 3px;
   }
 
   &--news {
     display: none;
+    min-width: 296px;
 
     @media (min-width: $tablet-width) {
       display: block;
@@ -33,19 +42,11 @@
 
   &--features {
     min-width: 240px;
-    border: 2px solid #123885;
-    color: #123885;
-    cursor: pointer;
 
     @media (min-width: $tablet-width) {
       min-width: 376px;
       border-width: 3px;
       margin-left: 0;
-    }
-
-    &:hover {
-      background-color: $blue-btn;
-      color: $white;
     }
   }
 }

@@ -178,7 +178,7 @@
     background: url("/img/bg-features-mobile.jpg") no-repeat;
     background-size: 100%;
 
-    @media (min-width: $desktop-width) {
+    @media (min-width: $tablet-width) {
       background: none;
       padding-left: 6px;
       padding-top: 26px;
@@ -226,7 +226,7 @@
   &__content {
     display: none;
 
-    @media (min-width: $desktop-width) {
+    @media (min-width: $tablet-width) {
       width: $desktop-width;
       margin: 0 auto;
       padding-top: 215px;
@@ -259,7 +259,7 @@
   &__wrapper {
     width: 86%;
     margin: 0 auto;
-    padding-bottom: 38px;
+    padding-bottom: 33px;
 
     @media (min-width: $tablet-width) {
       display: flex;
