@@ -1,0 +1,52 @@
+.btn {
+  display: block;
+  padding: 12px 15px;
+  margin: 0 auto;
+  background-color: transparent;
+  border: 2px solid #123885;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $blue-btn;
+    color: $white;
+  }
+
+
+  @include font-set(13px, 14px, normal, #123885, center);
+
+  @media (min-width: $tablet-width) {
+    padding: 17px 15px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: bold;
+    border-width: 3px;
+  }
+
+  &--news {
+    display: none;
+    min-width: 296px;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+  }
+
+  &--feedback {
+    font-size: 16px;
+    border: 0;
+    width: 80%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    align-self: center;
+  }
+
+  &--features {
+    min-width: 240px;
+
+    @media (min-width: $tablet-width) {
+      min-width: 376px;
+      border-width: 3px;
+      margin-left: 0;
+    }
+  }
+}
