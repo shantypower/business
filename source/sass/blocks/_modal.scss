@@ -8,6 +8,15 @@
   padding: 32px 25px;
   background-color: $white;
 
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    left: 50%;
+    top: 60px;
+    width: 705px;
+    padding: 33px 30px 30px;
+    transform: translateX(-50%);
+  }
+
   &--opened {
     display: block;
   }
@@ -140,3 +149,4 @@
 .modal__title:hover .modal__help {
   visibility: visible;
 }
+

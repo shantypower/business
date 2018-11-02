@@ -1415,6 +1415,15 @@ input[type="radio"].visually-hidden {
   z-index: 2;
   padding: 32px 25px;
   background-color: #ffffff; }
+  @media (min-width: 780px) {
+    .modal {
+      position: absolute;
+      left: 50%;
+      top: 60px;
+      width: 705px;
+      padding: 33px 30px 30px;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%); } }
   .modal--opened {
     display: block; }
   .modal__btn {
