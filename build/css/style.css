@@ -410,8 +410,9 @@ input[type="radio"].visually-hidden {
     right: 0;
     left: 25px;
     z-index: 1;
-    padding: 0 22px;
-    margin-top: 15px;
+    padding: 0;
+    padding-left: 22px;
+    padding-right: 22px;
     min-height: 100vh;
     background-color: #123885; }
     @media (min-width: 780px) {
@@ -431,7 +432,8 @@ input[type="radio"].visually-hidden {
                 justify-content: flex-start;
         background-color: #ffffff;
         min-height: 105px;
-        margin-top: 0; } }
+        margin-top: 0;
+        padding: 0; } }
     @media (min-width: 1072px) {
       .navigation--opened .navigation__menu {
         -webkit-box-pack: end;
@@ -517,6 +519,8 @@ input[type="radio"].visually-hidden {
           -ms-flex-direction: row;
               flex-direction: row; } }
   .navigation.navigation__no-js .navigation__menu {
+    position: inherit;
+    margin-top: 15px;
     left: 0; }
   .navigation.navigation__no-js .navigation__button {
     display: none; }
@@ -709,7 +713,20 @@ input[type="radio"].visually-hidden {
           -ms-flex-order: 3;
               order: 3;
       margin-top: 7px;
-      margin-right: 5px; } }
+      margin-right: 21px; } }
+  .user-nav__hint {
+    display: none;
+    position: absolute;
+    right: 74px;
+    bottom: 7px;
+    z-index: 1;
+    width: 115px;
+    margin: 0;
+    padding: 9px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #fcfdff;
+    background-color: #000000; }
   .user-nav__item {
     width: 30px;
     height: 30px;
@@ -718,6 +735,10 @@ input[type="radio"].visually-hidden {
     border-radius: 50%;
     font-size: 0;
     background: url("/img/sprites-user.png") no-repeat; }
+    .user-nav__item a {
+      display: block; }
+    .user-nav__item a:hover .user-nav__hint {
+      display: block; }
     @media (min-width: 780px) {
       .user-nav__item {
         border-color: #686767; } }
@@ -745,8 +766,6 @@ input[type="radio"].visually-hidden {
           background-position: -76px -4px; } }
       .user-nav__item--surch:hover {
         background-position: -76px -4px; }
-  .user-nav__hint {
-    display: none; }
   @media (min-width: 780px) {
     .user-nav .user-nav__item:hover > .user-nav__hint {
       display: block; } }
@@ -1016,6 +1035,8 @@ input[type="radio"].visually-hidden {
             flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     width: 100%; }
     @media (min-width: 1072px) {
       .features__tabs {

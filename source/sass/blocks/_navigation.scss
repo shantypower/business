@@ -34,8 +34,9 @@
     right: 0;
     left: 25px;
     z-index: 1;
-    padding: 0 22px;
-    margin-top: 15px;
+    padding: 0;
+    padding-left: 22px;
+    padding-right: 22px;
     min-height: 100vh;
     background-color: #123885;
 
@@ -48,6 +49,7 @@
       background-color: $white;
       min-height: 105px;
       margin-top: 0;
+      padding: 0;
     }
 
     @media (min-width: $desktop-width) {
@@ -151,6 +153,8 @@
   }
 
   .navigation__menu {
+    position: inherit;
+    margin-top: 15px;
     left: 0;
   }
 

@@ -7,11 +7,28 @@
   @media (min-width: $tablet-width) {
     order: 3;
     margin-top: 7px;
-    margin-right: 5px;
+    margin-right: 21px;
   }
 
   @include list-reset;
   margin-bottom: 20px;
+
+
+  &__hint {
+    display: none;
+    position: absolute;
+    right: 74px;
+    bottom: 7px;
+    z-index: 1;
+    width: 115px;
+    margin: 0;
+    padding: 9px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #fcfdff;
+    background-color: $black;
+  }
+
 
   &__item {
     width: 30px;
@@ -21,6 +38,14 @@
     border-radius: 50%;
     font-size: 0;
     background: url("/img/sprites-user.png") no-repeat;
+
+    a {
+      display: block;
+    }
+
+    a:hover .user-nav__hint {
+      display: block;
+    }
 
     @media (min-width: $tablet-width) {
       border-color: #686767;
@@ -66,10 +91,6 @@
         background-position: -76px -4px;
       }
     }
-  }
-
-  &__hint {
-    display: none;
   }
 
   @media (min-width: $tablet-width) {
