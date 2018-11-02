@@ -28,7 +28,10 @@
     @media (min-width: $tablet-width) {
       padding-top: 147px;
       padding-bottom: 329px;
-      background: url("/img/bg-desktop.jpg") no-repeat #484a51;
+      background: url("/img/bg-desktop.jpg") #484a51;
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: cover;
     }
 
     &:first-of-type {

@@ -11,7 +11,7 @@
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
-      margin-left: 37px;
+      margin-left: 40px;
     }
   }
 
@@ -28,9 +28,9 @@
       right: 0;
       left: 0;
       padding-bottom: 29px;
-      width: $tablet-width;
+      width: 100%;
       margin: 0 auto;
-      background-color: $white;
+      background-color: $dirtywhite;
     }
 
     @media (min-width: $desktop-width) {
@@ -95,6 +95,12 @@
       border-top: 18px solid $lightgrey;
       border-right: 18px solid transparent;
       border-left: 18px solid transparent;
+
+      @media (min-width: $tablet-width) {
+        bottom: -47px;
+        left: 45%;
+        border-width: 24px;
+      }
     }
 
     &--retail::before {
@@ -213,6 +219,7 @@
       font-size: 16px;
       line-height: 20px;
       padding-bottom: 27px;
+      padding-left: 6px;
     }
   }
 
@@ -222,15 +229,18 @@
     @media (min-width: $desktop-width) {
       width: $desktop-width;
       margin: 0 auto;
+      padding-top: 215px;
     }
 
     @media (min-width: $tablet-width) {
       &::before {
         box-sizing: border-box;
         display: block;
+        flex-shrink: 0;
         content: "";
-        width: 297px;
-        height: 297px;
+        width: 295px;
+        height: 295px;
+        margin-left: 64px;
         border: 12px solid $dirtywhite;
         border-radius: 50%;
         background: url("/img/bg-features-desktop.jpg") no-repeat center;
@@ -242,9 +252,6 @@
 
       @media (min-width: $tablet-width) {
         display: flex;
-        width: 100%;
-        padding-top: 215px;
-        padding-left: 173px;
       }
     }
   }
@@ -257,7 +264,7 @@
     @media (min-width: $tablet-width) {
       display: flex;
       flex-direction: column;
-      width: 66%;
+      width: 72%;
       margin: 0;
     }
   }
