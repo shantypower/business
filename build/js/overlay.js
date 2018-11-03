@@ -1,1 +1,0 @@
-"use strict";window.overlay=function(){var e=document.querySelector(".overlay");return{show:function(){e.classList.add("overlay--visible")},hide:function(){e.classList.remove("overlay--visible")}}}();
