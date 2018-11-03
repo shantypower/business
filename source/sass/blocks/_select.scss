@@ -14,6 +14,16 @@
     border: 0;
     cursor: pointer;
 
+    &--active {
+      padding-top: 19px;
+      padding-bottom: 19px;
+
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 16px;
+      color: #000000;
+    }
+
     &--highlight {
       background-color: $yellow;
     }
@@ -32,15 +42,24 @@
     }
   }
 
-  &__list {
+  &__dropdown {
     z-index: 1;
     display: none;
+    border-color: #97aeef;
 
     @include list-reset;
     box-shadow: 0 6px 7px 1px rgba(63, 120, 235, 0.3);
   }
 
-  &__item {
+  &__dropdown::after {
+    border-color: #cccccc;
+    border-top: 0;
+    border-right-color: transparent;
+    border-bottom-width: 5px;
+    border-left-color: transparent;
+  }
+
+  &__option {
     @include font-set(16px, 24px, 500, $black, left);
     padding: 13px 15px 13px 18px;
     background-color: $white;

@@ -270,11 +270,11 @@
       <div class="form__fieldset form__fieldset--address">
         <span class="form__label">Адрес подключения услуги</span>
         <div class="select select--city">
-          <span class="select__value  select__value--highlight">Выберите город</span>
-          <ul class="select__list">
-            <li class="select__item" data-value="city1">Санкт-Петербург</li>
-            <li class="select__item" data-value="city2">Москва</li>
-            <li class="select__item" data-value="city3">Краснодар</li>
+          <span class="select__value select__value--highlight">Выберите город</span>
+          <ul class="select__dropdown">
+            <li class="select__option" data-value="city1">Санкт-Петербург</li>
+            <li class="select__option" data-value="city2">Москва</li>
+            <li class="select__option" data-value="city3">Краснодар</li>
           </ul>
           <input type="hidden" name="city">
         </div>
@@ -288,10 +288,10 @@
         <span class="form__label">Тип обращения</span>
         <div class="select select--type">
           <span class="select__value">Выберите тип услуги</span>
-          <ul class="select__list">
-            <li class="select__item" data-value="survice1">Интернет</li>
-            <li class="select__item" data-value="survice2">Телефония</li>
-            <li class="select__item" data-value="survice3">Каналы передачи данных</li>
+          <ul class="select__dropdown">
+            <li class="select__option" data-value="survice1">Интернет</li>
+            <li class="select__option" data-value="survice2">Телефония</li>
+            <li class="select__option" data-value="survice3">Каналы передачи данных</li>
           </ul>
           <input type="hidden" name="type">
         </div>
@@ -300,10 +300,10 @@
         <span class="form__label">Тема обращения</span>
         <div class="select select--topic">
           <span class="select__value">Выберите тему</span>
-          <ul class="select__list">
-            <li class="select__item" data-value="topic1">Проблемы связи</li>
-            <li class="select__item" data-value="topic2">Отзывы и предложения</li>
-            <li class="select__item" data-value="topic3">Коммерческое предложение</li>
+          <ul class="select__dropdown">
+            <li class="select__option" data-value="topic1">Проблемы связи</li>
+            <li class="select__option" data-value="topic2">Отзывы и предложения</li>
+            <li class="select__option" data-value="topic3">Коммерческое предложение</li>
           </ul>
           <input type="hidden" name="topic">
         </div>
@@ -329,6 +329,7 @@
   <script src="js/slider.js"></script>
   <script src="js/tabsFeatures.js"></script>
   <script src="js/tabsSurvice-type.js"></script>
+  <script src="js/select.js"></script>
 
 </body>
 
