@@ -868,6 +868,8 @@ input[type="radio"].visually-hidden {
     padding-bottom: 9px;
     background: url("/img/bg-mobile.jpg") no-repeat #484a51;
     background-size: cover; }
+    .slider__item--active {
+      display: block; }
     @media (min-width: 780px) {
       .slider__item {
         padding-top: 147px;
@@ -876,8 +878,6 @@ input[type="radio"].visually-hidden {
         background-repeat: no-repeat;
         background-position: top center;
         background-size: cover; } }
-    .slider__item:first-of-type {
-      display: block; }
     .slider__item-description {
       font-weight: 100;
       font-size: 11px;

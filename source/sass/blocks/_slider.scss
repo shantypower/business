@@ -25,6 +25,10 @@
     background: url("/img/bg-mobile.jpg") no-repeat #484a51;
     background-size: cover;
 
+    &--active {
+      display: block;
+    }
+
     @media (min-width: $tablet-width) {
       padding-top: 147px;
       padding-bottom: 329px;
@@ -32,10 +36,6 @@
       background-repeat: no-repeat;
       background-position: top center;
       background-size: cover;
-    }
-
-    &:first-of-type {
-      display: block;
     }
 
     &-description {
