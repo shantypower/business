@@ -10,12 +10,14 @@ window.menuButton = (function () {
     window.overlay.show();
     nav.classList.remove('navigation--closed');
     nav.classList.add('navigation--opened');
+    document.addEventListener('keydown', onEscPress);
   };
 
   var closeMenu = function () {
     window.overlay.hide();
     nav.classList.remove('navigation--opened');
     nav.classList.add('navigation--closed');
+    document.removeEventListener('keydown', onEscPress);
   };
 
   var isMenuOpened = function () {
@@ -27,6 +29,12 @@ window.menuButton = (function () {
       closeMenu();
     } else {
       openMenu();
+    }
+  };
+
+  var onEscPress = function (evt) {
+    if (window.evtKeyPress.isEscPressed(evt)) {
+      closeMenu();
     }
   };
 

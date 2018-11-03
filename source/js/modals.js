@@ -69,7 +69,6 @@
     }
   };
 
-
   btnProfile.addEventListener('click', showProfile);
   btnFeedback.addEventListener('click', showFeedback);
 })();

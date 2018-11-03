@@ -1,7 +1,7 @@
 'use strict';
 window.evtKeyPress = (function () {
-  var ESC_KEY_CODE = 13;
-  var ENTER_KEY_CODE = 27;
+  var ESC_KEY_CODE = 27;
+  var ENTER_KEY_CODE = 13;
 
   var isKeyPressed = function (evt, keyCode) {
     return evt.keyCode && evt.keyCode === keyCode;
@@ -17,6 +17,6 @@ window.evtKeyPress = (function () {
 
   return {
     isEnterPressed: isEnterPressed,
-    isEscPressed: isEscPressed
+    isEscPressed: isEscPressed,
   };
 })();

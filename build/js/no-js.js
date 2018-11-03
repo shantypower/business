@@ -1,1 +1,1 @@
-"use strict";document.querySelector(".navigation__no-js").classList.remove(".navigation__no-js");
+"use strict";document.querySelector(".navigation__no-js").classList.remove("navigation__no-js");
