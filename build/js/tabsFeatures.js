@@ -1,0 +1,1 @@
+"use strict";new Tabs({wrapperClass:"features",tabContainerClass:"features__tabs",tabClass:"features__tab",activeTabClass:"features__tab--active",contentClass:"features__content",activeContentClass:"features__content--active"}).addListener();

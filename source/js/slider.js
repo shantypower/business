@@ -1,8 +1,5 @@
 'use strict';
 
-/**
- * Модуль управляет промо-слайдером на странице
- */
 (function () {
   var slider = document.querySelector('.slider');
   var slides = slider.querySelectorAll('.slider__item');
