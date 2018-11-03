@@ -512,16 +512,28 @@ input[type="radio"].visually-hidden {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+  .navigation.navigation__no-js .navigation__menu {
+    display: initial;
+    position: inherit;
+    left: 0;
+    margin-top: 15px;
+    padding-left: 22px;
+    padding-right: 22px;
+    background-color: #123885; }
+    @media (min-width: 780px) {
+      .navigation.navigation__no-js .navigation__menu {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        background-color: #ffffff;
+        padding-left: 0;
+        padding-right: 0; } }
   @media (min-width: 780px) {
     .navigation.navigation__no-js {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
               flex-direction: row; } }
-  .navigation.navigation__no-js .navigation__menu {
-    position: inherit;
-    margin-top: 15px;
-    left: 0; }
   .navigation.navigation__no-js .navigation__button {
     display: none; }
 
