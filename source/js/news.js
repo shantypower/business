@@ -156,9 +156,9 @@
     title.classList.add('article__title');
     link.innerHTML = itemData.title;
     link.setAttribute('href', itemData.link);
-    text.classList.add('article__desc');
+    text.classList.add('article__description');
     text.innerHTML = itemData.text;
-    date.classList.add('article__time');
+    date.classList.add('article__date');
     date.innerHTML = itemData.date;
 
     element.appendChild(title);
