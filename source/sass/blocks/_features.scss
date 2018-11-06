@@ -120,22 +120,22 @@
     }
 
     &--retail::before {
-      background: url("/img/sprites-features.png") no-repeat;
+      background: url("../img/sprites-features.png") no-repeat;
       background-position: -98px 7px;
     }
 
     &--wifi::before {
-      background: url("/img/sprites-features.png") no-repeat;
+      background: url("../img/sprites-features.png") no-repeat;
       background-position: -267px 7px;
     }
 
     &--callcenter::before {
-      background: url("/img/sprites-features.png") no-repeat;
+      background: url("../img/sprites-features.png") no-repeat;
       background-position: -46px 3px;
     }
 
     &--logistics::before {
-      background: url("/img/sprites-features.png") no-repeat $blue;
+      background: url("../img/sprites-features.png") no-repeat $blue;
       background-position: -385px 7px;
     }
 
@@ -152,25 +152,25 @@
 
   .features__tab--active.features__tab--retail::before,
   .features__tab--retail:hover::before {
-    background: url("/img/sprites-features.png") no-repeat $yellow;
+    background: url("../img/sprites-features.png") no-repeat $yellow;
     background-position: -153px 7px;
   }
 
   .features__tab--active.features__tab--wifi::before,
   .features__tab--wifi:hover::before {
-    background: url("/img/sprites-features.png") no-repeat $yellow;
+    background: url("../img/sprites-features.png") no-repeat $yellow;
     background-position: -209px 7px;
   }
 
   .features__tab--active.features__tab--callcenter::before,
   .features__tab--callcenter:hover::before {
-    background: url("/img/sprites-features.png") no-repeat $yellow;
+    background: url("../img/sprites-features.png") no-repeat $yellow;
     background-position: 5px 7px;
   }
 
   .features__tab--active.features__tab--logistics::before,
   .features__tab--logistics:hover::before {
-    background: url("/img/sprites-features.png") no-repeat $yellow;
+    background: url("../img/sprites-features.png") no-repeat $yellow;
     background-position: -325px 7px;
   }
 
@@ -191,7 +191,7 @@
     display: flex;
     margin: 0;
     padding: 39px 113px 29px 25px;
-    background: url("/img/bg-features-mobile.jpg") no-repeat;
+    background: url("../img/bg-features-mobile.jpg") no-repeat;
     background-size: 100%;
 
     @media (min-width: $tablet-width) {
@@ -260,7 +260,7 @@
         margin-right: 8px;
         border: 12px solid $dirtywhite;
         border-radius: 50%;
-        background: url("/img/bg-features-desktop.jpg") no-repeat center;
+        background: url("../img/bg-features-desktop.jpg") no-repeat center;
       }
     }
 
