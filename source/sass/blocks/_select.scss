@@ -1,8 +1,21 @@
 .select {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   margin-bottom: 18px;
+  width: 100%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 27px;
+    right: 16px;
+    border: 5px solid #000;
+    border-right-color: transparent;
+    border-bottom-width: 0;
+    border-left-color: transparent;
+  }
 
   &__value {
     position: relative;
@@ -27,36 +40,19 @@
     &--highlight {
       background-color: $yellow;
     }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 25px;
-      right: 17px;
-      width: 5px;
-      height: 5px;
-      border: 0;
-      border-top: 2px solid $black;
-      border-left: 2px solid $black;
-      transform: rotate(135deg);
-    }
   }
 
   &__dropdown {
+    position: absolute;
+    top: 54px;
+    left: -1px;
     z-index: 1;
     display: none;
+    width: 100%;
     border-color: #97aeef;
 
     @include list-reset;
     box-shadow: 0 6px 7px 1px rgba(63, 120, 235, 0.3);
-  }
-
-  &__dropdown::after {
-    border-color: #cccccc;
-    border-top: 0;
-    border-right-color: transparent;
-    border-bottom-width: 5px;
-    border-left-color: transparent;
   }
 
   &__option {
@@ -64,8 +60,37 @@
     padding: 13px 15px 13px 18px;
     background-color: $white;
 
+    @media (min-width: $desktop-width) {
+      padding-top: 6px;
+      padding-bottom: 6px;
+    }
+
     &:hover {
       background-color: $yellow;
     }
   }
+
+  &--city::after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    right: 17px;
+    width: 5px;
+    height: 5px;
+    border: 0;
+    border-top: 2px solid $black;
+    border-left: 2px solid $black;
+    transform: rotate(135deg);
+  }
+}
+
+.select__dropdown + .select::after {
+  transform: rotate(135deg);
+}
+
+@media(min-width: $desktop-width) {
+  .select--city {
+    width: 37.5%;
+  }
+
 }

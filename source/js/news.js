@@ -38,8 +38,8 @@
     'Публикации'
   ];
   var URL_LIST = [
-    'http://localhost:3000/data/news.json',
-    'http://localhost:3000/data/publications.json'
+    'http://localhost:3002/data/news.json',
+    'http://localhost:3002/data/publications.json'
   ];
 
   /**
