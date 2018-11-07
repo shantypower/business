@@ -78,6 +78,11 @@
     }
   }
 
+  &--profile .modal__tab {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
   &--opened {
     display: block;
   }
@@ -186,8 +191,8 @@
     flex-grow: 1;
     border: 1px solid #97adef;
     cursor: pointer;
-    padding-top: 9px;
-    padding-bottom: 9px;
+    padding: 3px;
+
 
     @include font-set(12px, 12px, normal, $blue-btn, center);
 
