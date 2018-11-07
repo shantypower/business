@@ -247,9 +247,13 @@
     display: none;
 
     @media (min-width: $tablet-width) {
-      width: $desktop-width;
+      width: $tablet-width;
       margin: 0 auto;
       padding-top: 215px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: $desktop-width;
     }
 
     @media (min-width: $tablet-width) {

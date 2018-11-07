@@ -69,7 +69,7 @@
 
     @media (min-width: $tablet-width) {
       display: block;
-      width: 30%;
+      width: 220px;
       max-width: 335px;
       margin-right: 32px;
 
@@ -79,7 +79,8 @@
     }
 
     @media (min-width: $desktop-width) {
-      margin-right: 46px;
+      margin-right: 41px;
+      width: 330px;
     }
 
     &--active {
