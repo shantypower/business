@@ -151,10 +151,6 @@
 
     @include font-set(16px, 16px, 500, #123885, left);
 
-    &:hover .modal__title::after {
-      display: block;
-    }
-
     @media (min-width: $desktop-width) {
       padding-left: 9px;
       margin-right: 27px;
@@ -238,7 +234,6 @@
 
   &__help {
     visibility: hidden;
-    display: block;
     position: absolute;
     left: 0;
     bottom: 17px;
@@ -275,7 +270,7 @@
   }
 }
 
-.modal__title:hover .modal__help {
+.modal__title::before:hover .modal__help {
   visibility: visible;
 }
 
