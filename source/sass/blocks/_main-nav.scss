@@ -23,12 +23,6 @@
       left: 0;
       right: 0;
     }
-
-    .main-nav__item::after {
-      top: 18px;
-      transform: rotate(-135deg);
-      border-color: $yellow;
-    }
   }
 
   &__item {
@@ -45,11 +39,29 @@
       }
     }
 
+    &:hover::before {
+      border-color: $yellow;
+    }
+
+    &:hover .main-nav__item-link {
+      color: $yellow;
+    }
+  }
+
+  &__item-link {
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+
+    @include font-set(16px, 24px, 500, $white, left);
+    margin-bottom: 2px;
+    padding: 1px 0;
+
     &::before {
       content: "";
       position: absolute;
-      top: 11px;
-      right: 0;
+      top: 3px;
+      right: 10px;
       width: 18px;
       height: 18px;
       background-color: transparent;
@@ -64,12 +76,12 @@
     &::after {
       content: "";
       position: absolute;
-      top: 16px;
-      right: 7px;
-      width: 5px;
-      height: 5px;
+      top: 9px;
+      right: 16px;
+      width: 6px;
+      height: 6px;
       background-color: transparent;
-      border: 1.5px solid $white;
+      border: 2px solid #fff;
       border-top: none;
       border-left: none;
       transform: rotate(45deg);
@@ -79,22 +91,11 @@
       }
     }
 
-    &:hover::before {
-      border-color: $yellow;
+    &--dropdown::after {
+      border: 2px solid #fbf239;
+      border-right: none;
+      border-bottom: none;
     }
-
-    &:hover .main-nav__item-link {
-      color: $yellow;
-    }
-  }
-
-  &__item-link {
-    box-sizing: border-box;
-    display: block;
-
-    @include font-set(16px, 24px, 500, $white, left);
-    margin-bottom: 2px;
-    padding: 1px 0;
 
     @media (min-width: $tablet-width) {
       font-size: 15px;

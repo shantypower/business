@@ -11,20 +11,18 @@
     display: none;
   }
 
-  &__item:not(:first-of-type) {
-    padding-left: 11px;
-  }
-
   &__item {
     display: inline-flex;
     vertical-align: middle;
 
     &::after {
+      box-sizing: border-box;
       display: inline-block;
       content: "";
       width: 1px;
       height: 15px;
       margin-top: 4px;
+      margin-right: 10px;
       background-color: rgba(140, 171, 232, 0.8);
     }
 
