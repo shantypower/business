@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 window.evtKeyPress = (function () {
   var ESC_KEY_CODE = 27;
   var ENTER_KEY_CODE = 13;

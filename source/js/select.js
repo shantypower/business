@@ -1,12 +1,12 @@
-'use strict';
+"use strict";
 /**
  * Модуль управляет выпадающими списками в форме
  */
 (function () {
 
-  var selectCity = document.querySelector('.select--city');
-  var selectType = document.querySelector('.select--type');
-  var selectSubject = document.querySelector('.select--topic');
+  var selectCity = document.querySelector(".select--city");
+  var selectType = document.querySelector(".select--type");
+  var selectSubject = document.querySelector(".select--topic");
 
   var activeSelect = null;
   var selectedValue = null;
@@ -14,18 +14,18 @@
   var inputValue = null;
 
   var showDropBlock = function () {
-    activeSelect.classList.add('select--dropdown');
-    activeDropBlock.style.display = 'block';
-    activeDropBlock.addEventListener('click', onOptionClick);
-    selectedValue.classList.remove('select__value--active');
+    activeSelect.classList.add("select--dropdown");
+    activeDropBlock.style.display = "block";
+    activeDropBlock.addEventListener("click", onOptionClick);
+    selectedValue.classList.remove("select__value--active");
   };
 
   var hideDropBlock = function () {
-    activeSelect.classList.remove('select--dropdown');
-    activeDropBlock.style.display = 'none';
-    activeDropBlock.removeEventListener('click', onOptionClick);
+    activeSelect.classList.remove("select--dropdown");
+    activeDropBlock.style.display = "none";
+    activeDropBlock.removeEventListener("click", onOptionClick);
     if (inputValue.value) {
-      selectedValue.classList.add('select__value--active');
+      selectedValue.classList.add("select__value--active");
     }
   };
 
@@ -33,9 +33,9 @@
     var target = evt.target;
 
     while (target !== activeDropBlock) {
-      if (target.classList.contains('select__option')) {
+      if (target.classList.contains("select__option")) {
         selectedValue.textContent = target.textContent;
-        inputValue.value = target.getAttribute('data-value');
+        inputValue.value = target.getAttribute("data-value");
         break;
       }
       target = target.parentNode;
@@ -45,7 +45,7 @@
   var onSelectClick = function (evt) {
     var target = evt.target;
 
-    while (!target.classList.contains('select')) {
+    while (!target.classList.contains("select")) {
       target = target.parentNode;
     }
 
@@ -54,18 +54,18 @@
     }
 
     activeSelect = target;
-    selectedValue = activeSelect.querySelector('.select__value');
-    activeDropBlock = activeSelect.querySelector('.select__dropdown');
-    inputValue = activeSelect.querySelector('input[type="hidden"]');
+    selectedValue = activeSelect.querySelector(".select__value");
+    activeDropBlock = activeSelect.querySelector(".select__dropdown");
+    inputValue = activeSelect.querySelector("input[type='hidden']");
 
-    if (activeSelect.classList.contains('select--dropdown')) {
+    if (activeSelect.classList.contains("select--dropdown")) {
       hideDropBlock();
     } else {
       showDropBlock();
     }
   };
 
-  selectCity.addEventListener('click', onSelectClick);
-  selectType.addEventListener('click', onSelectClick);
-  selectSubject.addEventListener('click', onSelectClick);
+  selectCity.addEventListener("click", onSelectClick);
+  selectType.addEventListener("click", onSelectClick);
+  selectSubject.addEventListener("click", onSelectClick);
 })();

@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 /**
  * @typedef {Object} tabOptions - Параметры табов
  * @property {string} wrapperClass - класс обертки табов и контента
@@ -15,17 +15,17 @@
  * @param {tabOptions} options - настройки табов
  */
 var Tabs = function (options) {
-  this.wrapper = document.querySelector('.' + options.wrapperClass);
+  this.wrapper = document.querySelector("." + options.wrapperClass);
   this.tabContainerClass = options.tabContainerClass;
   this.tabClass = options.tabClass;
   this.activeTabClass = options.activeTabClass;
   this.contentClass = options.contentClass;
   this.activeContentClass = options.activeContentClass;
 
-  this.tabs = this.wrapper.querySelectorAll('.' + this.tabClass);
-  this.tabContents = this.wrapper.querySelectorAll('.' + this.contentClass);
+  this.tabs = this.wrapper.querySelectorAll("." + this.tabClass);
+  this.tabContents = this.wrapper.querySelectorAll("." + this.contentClass);
   this.activeTabIndex = null;
-  this.tabContainer = this.wrapper.querySelector('.' + this.tabContainerClass);
+  this.tabContainer = this.wrapper.querySelector("." + this.tabContainerClass);
 
   this.cb = options.cb;
 };
@@ -37,7 +37,7 @@ var Tabs = function (options) {
 Tabs.prototype.activateTab = function (tabsObj) {
   tabsObj.tabs[tabsObj.activeTabIndex].classList.add(tabsObj.activeTabClass);
   tabsObj.tabContents[tabsObj.activeTabIndex].classList.add(tabsObj.activeContentClass);
-  if (typeof tabsObj.cb === 'function') {
+  if (typeof tabsObj.cb === "function") {
     tabsObj.cb();
   }
 };
@@ -79,6 +79,6 @@ Tabs.prototype.onTabCLick = function (evt) {
  *  Функция добавляет обработчик с привязаным this к контейнеру с табами
  */
 Tabs.prototype.addListener = function () {
-  this.tabContainer.addEventListener('click', this.onTabCLick.bind(this));
+  this.tabContainer.addEventListener("click", this.onTabCLick.bind(this));
 };
 

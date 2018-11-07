@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * Модуль управляет разделом новостей сайта
@@ -7,39 +7,39 @@
  */
 (function () {
 
-  var wrapperClass = 'news';
-  var tabContainerClass = 'news__tabs';
-  var tabClass = 'news__tab';
-  var activetabClass = 'news__tab--active';
-  var contentClass = 'news__content';
-  var activeContentClass = 'news__content--active';
+  var wrapperClass = "news";
+  var tabContainerClass = "news__tabs";
+  var tabClass = "news__tab";
+  var activetabClass = "news__tab--active";
+  var contentClass = "news__content";
+  var activeContentClass = "news__content--active";
 
-  var wrapper = document.querySelector('.' + wrapperClass);
-  var tabs = wrapper.querySelectorAll('.' + tabClass);
-  var tabContents = wrapper.querySelectorAll('.' + contentClass);
+  var wrapper = document.querySelector("." + wrapperClass);
+  var tabs = wrapper.querySelectorAll("." + tabClass);
+  var tabContents = wrapper.querySelectorAll("." + contentClass);
   var activeTabIndex = 0;
-  var tabContainer = wrapper.querySelector('.' + tabContainerClass);
+  var tabContainer = wrapper.querySelector("." + tabContainerClass);
 
   var newsItems = null;
   var activeNewsIndex = 0;
-  var dotsContainer = wrapper.querySelector('.news__indicators');
+  var dotsContainer = wrapper.querySelector(".news__indicators");
   var dots = null;
-  var btnMoreNews = wrapper.querySelector('.btn--news');
+  var btnMoreNews = wrapper.querySelector(".btn--news");
 
   var xhr = new XMLHttpRequest();
   var xhrInProgress = false;
 
   var BTN_VALUES = [
-    'Еще новости',
-    'Еще публикации'
+    "Еще новости",
+    "Еще публикации"
   ];
   var TAB_VALUES = [
-    'Новости',
-    'Публикации'
+    "Новости",
+    "Публикации"
   ];
   var URL_LIST = [
-    'http://localhost:3000/data/news.json',
-    'http://localhost:3000/data/publications.json'
+    "http://localhost:3000/data/news.json",
+    "http://localhost:3000/data/publications.json"
   ];
 
   /**
@@ -55,8 +55,8 @@
    * Функция обновляет значение переменной newsItems
    */
   var updateNewsItems = function () {
-    newsItems = tabContents[activeTabIndex].querySelectorAll('.news__item');
-    activeNewsIndex = [].indexOf.call(newsItems, tabContents[activeTabIndex].querySelector('.news__item--active'));
+    newsItems = tabContents[activeTabIndex].querySelectorAll(".news__item");
+    activeNewsIndex = [].indexOf.call(newsItems, tabContents[activeTabIndex].querySelector(".news__item--active"));
     if (activeNewsIndex < 0) {
       activeNewsIndex = 0;
     }
@@ -66,7 +66,7 @@
    * Функция удаляет статьи новостей, точки навигации слайдера
    */
   var clearNewsItems = function () {
-    tabContents[activeTabIndex].innerHTML = '';
+    tabContents[activeTabIndex].innerHTML = "";
     clearDots();
     updateNewsItems();
   };
@@ -75,14 +75,14 @@
    * Функция обновляет значение переменной dots
    */
   var updateDots = function () {
-    dots = dotsContainer.querySelectorAll('.news__indicator');
+    dots = dotsContainer.querySelectorAll(".news__indicator");
   };
 
   /**
    * Функция удаляет точки навигации слайдера
    */
   var clearDots = function () {
-    dotsContainer.innerHTML = '';
+    dotsContainer.innerHTML = "";
     updateDots();
   };
 
@@ -95,8 +95,8 @@
     var dot = null;
 
     for (var i = 0; i < n; i++) {
-      dot = document.createElement('li');
-      dot.classList.add('news__indicator');
+      dot = document.createElement("li");
+      dot.classList.add("news__indicator");
       dotsContainer.appendChild(dot);
     }
     updateDots();
@@ -115,18 +115,18 @@
    * @param {number} n - номер выбранной новости
    */
   var activateNewsItem = function (n) {
-    newsItems[activeNewsIndex].classList.remove('news__item--active');
-    dots[activeNewsIndex].classList.remove('news__indicator--active');
+    newsItems[activeNewsIndex].classList.remove("news__item--active");
+    dots[activeNewsIndex].classList.remove("news__indicator--active");
     activeNewsIndex = n;
-    newsItems[activeNewsIndex].classList.add('news__item--active');
-    dots[activeNewsIndex].classList.add('news__indicator--active');
+    newsItems[activeNewsIndex].classList.add("news__item--active");
+    dots[activeNewsIndex].classList.add("news__indicator--active");
   };
 
 
   var sendRequest = function () {
     if (!xhrInProgress) {
       var xhrURL = URL_LIST[getReferenceIndex()];
-      xhr.open('GET', xhrURL);
+      xhr.open("GET", xhrURL);
       xhr.send();
     }
   };
@@ -145,20 +145,20 @@
    * @return {HTMLElement}
    */
   var renderNewsItem = function (itemData) {
-    var element = document.createElement('article');
-    var title = document.createElement('h3');
-    var link = document.createElement('a');
-    var text = document.createElement('p');
-    var date = document.createElement('span');
+    var element = document.createElement("article");
+    var title = document.createElement("h3");
+    var link = document.createElement("a");
+    var text = document.createElement("p");
+    var date = document.createElement("span");
 
-    element.classList.add('news__item');
-    element.classList.add('article');
-    title.classList.add('article__title');
+    element.classList.add("news__item");
+    element.classList.add("article");
+    title.classList.add("article__title");
     link.innerHTML = itemData.title;
-    link.setAttribute('href', itemData.link);
-    text.classList.add('article__description');
+    link.setAttribute("href", itemData.link);
+    text.classList.add("article__description");
     text.innerHTML = itemData.text;
-    date.classList.add('article__date');
+    date.classList.add("article__date");
     date.innerHTML = itemData.date;
 
     element.appendChild(title);
@@ -198,7 +198,7 @@
   };
 
   var onErrorLoadData = function () {
-    console.log('не удалось загрузить данные');
+    console.log("не удалось загрузить данные");
   };
 
   var onLoadData = function (evt) {
@@ -212,7 +212,7 @@
   var activateTab = function (cb) {
     tabs[activeTabIndex].classList.add(activetabClass);
     tabContents[activeTabIndex].classList.add(activeContentClass);
-    if (typeof cb === 'function') {
+    if (typeof cb === "function") {
       cb();
     }
   };
@@ -245,7 +245,7 @@
     var target = evt.target;
 
     while (target !== dotsContainer) {
-      if (target.classList.contains('news__indicator')) {
+      if (target.classList.contains("news__indicator")) {
         activateNewsItem([].indexOf.call(dots, target));
         break;
       }
@@ -260,12 +260,12 @@
 
   updateNewsItems();
   renderDots(newsItems.length);
-  dotsContainer.addEventListener('click', onDotClick);
-  btnMoreNews.addEventListener('click', onClickMoreNews);
-  xhr.addEventListener('error', onErrorLoadData);
-  xhr.addEventListener('timeout', onErrorLoadData);
-  xhr.addEventListener('load', onLoadData);
+  dotsContainer.addEventListener("click", onDotClick);
+  btnMoreNews.addEventListener("click", onClickMoreNews);
+  xhr.addEventListener("error", onErrorLoadData);
+  xhr.addEventListener("timeout", onErrorLoadData);
+  xhr.addEventListener("load", onLoadData);
 
-  tabContainer.addEventListener('click', onTabCLick);
+  tabContainer.addEventListener("click", onTabCLick);
 
 })();
