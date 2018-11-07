@@ -6,7 +6,7 @@
 
   @media (min-width: $tablet-width) {
     order: 3;
-    margin-top: 7px;
+    margin-top: 6px;
   }
 
   @include list-reset;
@@ -17,7 +17,7 @@
     display: none;
     position: absolute;
     right: 74px;
-    bottom: 7px;
+    bottom: -13px;
     z-index: 1;
     width: 115px;
     margin: 0;
