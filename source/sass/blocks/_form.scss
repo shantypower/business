@@ -10,7 +10,7 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 40px 36px 50px;
+    padding: 40px 36px 52gipx;
     padding-bottom: 41px;
   }
 
@@ -19,8 +19,9 @@
   }
 
   &__input {
-    margin: 0 0 15px;
-    padding: 17px;
+    margin: 0 0 13px;
+    padding: 18px;
+    padding-left: 16px;
     border: 0;
     background-color: $white;
 
@@ -30,7 +31,7 @@
     }
 
     &:last-of-type {
-      margin-bottom: 20px;
+      margin-bottom: 21px;
 
       @media (min-width: $desktop-width) {
         margin-bottom: 14px;

@@ -70,6 +70,7 @@
     @media (min-width: $tablet-width) {
       display: block;
       width: 30%;
+      max-width: 335px;
       margin-right: 32px;
 
       &:nth-child(3n) {
