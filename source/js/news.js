@@ -28,8 +28,6 @@
   var modalError = document.querySelector(".modal--error");
   var modalText = modalError.querySelector(".modal__error");
 
-  var overlay = document.querySelector(".overlay");
-
   var BTN_VALUES = [
     "Еще новости",
     "Еще публикации"
@@ -205,6 +203,7 @@
 
   var onTabCLick = function (evt) {
     evt.preventDefault();
+    clearNewsItems();
     var target = evt.target;
 
     while (target !== tabContainer) {
