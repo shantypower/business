@@ -9,6 +9,7 @@
   &__details {
     display: flex;
     flex-direction: column;
+    width: 100%;
 
     @media (min-width: $desktop-width) {
       display: flex;
@@ -146,7 +147,6 @@
     &::before {
       display: block;
       content: "";
-      position: relative;
       top: 4px;
       left: 9px;
       width: 60px;
@@ -207,12 +207,9 @@
       padding-bottom: 2px;
     }
 
-    a {
+    a span {
       @include font-set (20px, 24px, 500, #123885, left);
-
-      mark {
-        color: #123885;
-      }
+      color: #123885;
 
       @media (min-width: $tablet-width) {
         font-size: 34px;
