@@ -25,6 +25,9 @@
   var dotsContainer = wrapper.querySelector(".news__indicators");
   var dots = null;
   var btnMoreNews = wrapper.querySelector(".btn--news");
+  var modalError = document.querySelector(".modal--error");
+  var escapeError = modalError.querySelector(".modal__btn");
+  var overlay = document.querySelector(".overlay");
 
   var xhr = new XMLHttpRequest();
   var xhrInProgress = false;
@@ -198,7 +201,7 @@
   };
 
   var onErrorLoadData = function () {
-    console.log("не удалось загрузить данные");
+    window.modals.showModal(modalError);
   };
 
   var onLoadData = function (evt) {

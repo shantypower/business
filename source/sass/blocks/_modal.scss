@@ -237,6 +237,13 @@
     }
   }
 
+  &__error {
+    padding: 25px;
+    background-color: $dirtywhite;
+
+    @include font-set(14px, 18px, normal, $black, center);
+  }
+
   &__help {
     visibility: hidden;
     position: absolute;

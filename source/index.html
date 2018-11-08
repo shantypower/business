@@ -210,15 +210,13 @@
             <span class="article__date">21 ноября 2014</span>
           </article>
         </div>
-        <div class="news__content">
-        </div>
-      </div>
-      <ul class="news__indicators">
-        <li class="news__indicator">7 ноября 2014</li>
-        <li class="news__indicator news__indicator--active">14 ноября 2014</li>
-        <li class="news__indicator">21 ноября 2014</li>
-      </ul>
-      <a href="#" class="btn btn--news">Еще новости</a>
+        <div class="news__content"></div>
+        <ul class="news__indicators">
+          <li class="news__indicator">7 ноября 2014</li>
+          <li class="news__indicator news__indicator--active">14 ноября 2014</li>
+          <li class="news__indicator">21 ноября 2014</li>
+        </ul>
+        <a href="#" class="btn btn--news">Еще новости</a>
     </section>
   </main>
   <div class="modal modal--profile">
@@ -318,7 +316,16 @@
       Форма для промо-офисов
     </form>
   </div>
+  <div class="modal modal--error">
+    <div class="modal__header">
+      <h2 class="modal__title">Ошибка получения данных</h2>
+      <button class="modal__btn" type="button"><span>Закрыть</span></button>
+    </div>
+    <p class="modal__error">Произошла ошибка соединения с сервером</p>
+  </div>
   <div class="overlay"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="js/no-js.js"></script>
   <script src="js/menuButton.js"></script>
   <script src="js/overlay.js"></script>

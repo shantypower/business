@@ -1,7 +1,7 @@
 "use strict";
 // * Модуль управляет модальными окнами профиля и обратной связи
 
-(function () {
+window.modals = (function () {
 
   var btnProfile = document.querySelector(".user-nav__item--profile");
   var btnFeedback = document.querySelector(".user-nav__item--feedback");
@@ -74,5 +74,11 @@
   btnProfile.addEventListener("click", showProfile);
   btnFeedback.addEventListener("click", showFeedback);
   overlay.addEventListener("click", closeModal);
+
+  return {
+    onEscPress: onEscPress,
+    showModal: showModal,
+    closeModal: closeModal
+  }
 
 })();
