@@ -7,8 +7,6 @@
     "http://localhost:3000/data/publications.json"
   ];
 
-  //var xhrURL = URL_LIST[window.news.getReferenceIndex()];
- // var DATA = URL + '/data/news.json';
   var LOAD_TIME = 100000;
   var SUCCESS_STATUS = 200;
 

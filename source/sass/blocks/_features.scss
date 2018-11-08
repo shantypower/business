@@ -7,6 +7,9 @@
   }
 
   &__details {
+    display: flex;
+    flex-direction: column;
+
     @media (min-width: $desktop-width) {
       display: flex;
       flex-wrap: wrap;
@@ -192,7 +195,6 @@
   }
 
   &__subtitle {
-    display: flex;
     margin: 0;
     padding: 39px 113px 29px 25px;
     background: url("../img/bg-features-mobile.jpg") no-repeat;

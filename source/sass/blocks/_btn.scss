@@ -24,7 +24,9 @@
 
   &--news {
     display: none;
-    min-width: 296px;
+    width: 335px;
+    margin: 0 auto;
+    margin-top: 18px;
 
     @media (min-width: $tablet-width) {
       display: block;
