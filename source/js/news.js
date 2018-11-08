@@ -26,11 +26,9 @@
   var dots = null;
   var btnMoreNews = wrapper.querySelector(".btn--news");
   var modalError = document.querySelector(".modal--error");
-  var escapeError = modalError.querySelector(".modal__btn");
-  var overlay = document.querySelector(".overlay");
+  var modalText = modalError.querySelector(".modal__error");
 
-  var xhr = new XMLHttpRequest();
-  var xhrInProgress = false;
+  var overlay = document.querySelector(".overlay");
 
   var BTN_VALUES = [
     "Еще новости",
@@ -39,10 +37,6 @@
   var TAB_VALUES = [
     "Новости",
     "Публикации"
-  ];
-  var URL_LIST = [
-    "http://localhost:3000/data/news.json",
-    "http://localhost:3000/data/publications.json"
   ];
 
   /**
@@ -125,15 +119,6 @@
     dots[activeNewsIndex].classList.add("news__indicator--active");
   };
 
-
-  var sendRequest = function () {
-    if (!xhrInProgress) {
-      var xhrURL = URL_LIST[getReferenceIndex()];
-      xhr.open("GET", xhrURL);
-      xhr.send();
-    }
-  };
-
   /**
    * @typedef {Object} ItemData - Информация о статье
    * @property {string} title - Заголовок статьи
@@ -171,6 +156,7 @@
 
     return element;
   };
+
   /**
    * Функция отрисовывает статьи и точки навигации слайдера на странице
    * @param {Array.<ItemData>} items - массив со статьями
@@ -197,19 +183,7 @@
   var onActivateTab = function () {
     clearNewsItems();
     renameButton();
-    sendRequest();
-  };
-
-  var onErrorLoadData = function () {
-    window.modals.showModal(modalError);
-  };
-
-  var onLoadData = function (evt) {
-    if (evt.target.status >= 400) {
-      onErrorLoadData(evt);
-    } else if (evt.target.status >= 200) {
-      renderItems(JSON.parse(evt.target.response));
-    }
+    window.backend.load(successHandler, errorHandler);
   };
 
   var activateTab = function (cb) {
@@ -258,17 +232,28 @@
 
   var onClickMoreNews = function (evt) {
     evt.preventDefault();
-    sendRequest();
+    window.backend.load(successHandler, errorHandler);
+  };
+
+  var successHandler = function (evt) {
+    renderItems(evt);
+  };
+
+  var errorHandler = function (message) {
+    window.modals.showModal(modalError);
+    modalText.textContent = message;
   };
 
   updateNewsItems();
   renderDots(newsItems.length);
   dotsContainer.addEventListener("click", onDotClick);
   btnMoreNews.addEventListener("click", onClickMoreNews);
-  xhr.addEventListener("error", onErrorLoadData);
-  xhr.addEventListener("timeout", onErrorLoadData);
-  xhr.addEventListener("load", onLoadData);
-
   tabContainer.addEventListener("click", onTabCLick);
+
+  window.news = {
+    errorHandler: errorHandler,
+    successHandler: successHandler,
+    getReferenceIndex: getReferenceIndex
+  }
 
 })();
