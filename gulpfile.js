@@ -13,8 +13,6 @@ var uglify = require("gulp-uglify");
 var pump = require("pump");
 var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
-var webp = require("gulp-webp");
-var svgstore = require("gulp-svgstore");
 var del = require("del");
 var run = require("run-sequence");
 var server = require("browser-sync").create();
@@ -26,7 +24,9 @@ gulp.task("clean", function() {
 gulp.task("copy", function() {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/img/**"
+    "source/img/**",
+    "source/data/*.json",
+    "source/js/*.js"
   ], {
     base: "source"
   })
@@ -77,8 +77,14 @@ gulp.task("js", function (cb) {
   );
 });
 
+
+gulp.task('copy:data', function () {
+  return gulp.src('data/*.json')
+      .pipe(gulp.dest('build/data'));
+});
+
 gulp.task("build", function(done) {
-  run("clean", "copy", "style", "html", "js", done);
+  run("clean", "copy", "style", "html", "js", "copy:data", done);
 });
 
 gulp.task("serve", function() {

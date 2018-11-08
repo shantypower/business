@@ -24,17 +24,23 @@
 
   &--news {
     display: none;
-    min-width: 296px;
+    width: 335px;
+    margin: 0 auto;
+    margin-top: 18px;
 
     @media (min-width: $tablet-width) {
       display: block;
     }
   }
 
+  &--profile {
+    width: 100%;
+  }
+
   &--feedback {
     font-size: 16px;
     border: 0;
-    width: 80%;
+    width: 81%;
     padding-top: 25px;
     padding-bottom: 25px;
     align-self: center;

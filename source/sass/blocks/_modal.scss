@@ -8,49 +8,33 @@
   padding: 32px 25px;
   background-color: $white;
 
-  &__btn {
+  @media (min-width: $tablet-width) {
     position: absolute;
-    top: -3px;
-    left: 3px;
-    z-index: 1;
-    display: block;
-    width: 26px;
-    height: 22px;
-    font-size: 0;
-    background-color: transparent;
-    border: 0;
-    cursor: pointer;
+    left: 50%;
+    top: 60px;
+    width: 705px;
+    padding: 33px 30px 25px;
+    transform: translateX(-50%);
+  }
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 3px;
-      left: 0;
-      width: 15px;
-      height: 15px;
-      border-bottom: 1px solid #688cd6;
-      border-left: 1px solid #688cd6;
-      transform: rotate(45deg);
-    }
+  @media (min-width: $desktop-width) {
+    top: 129px;
+    width: 658px;
+    padding-top: 30px;
+    padding-left: 24px;
+    padding-right: 24px;
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: 10px;
-      left: -2px;
-      width: 26px;
-      height: 1px;
-      background-color: #688cd6;
+    &--feedback {
+      top: 71px;
+      width: 904px;
+
+      .modal__title {
+        padding-left: 0;
+      }
     }
   }
 
-  &__title {
-    margin: 0;
-    padding-left: 41px;
-    margin-bottom: 34px;
-
-    @include font-set(16px, 16px, 500, #123885, left);
-
+  &--feedback .modal__title {
     &::before {
       display: block;
       position: absolute;
@@ -65,6 +49,120 @@
       text-align: center;
       border: 1.5px solid $yellow;
       border-radius: 50%;
+
+      @media (min-width: $desktop-width) {
+        top: 4px;
+        left: 206px;
+      }
+    }
+
+    &::after {
+      display: none;
+      position: absolute;
+      content: "После обработки сообщения, с Вами свяжется наш менеджер";
+      right: 231px;
+      bottom: 14px;
+      z-index: 1;
+      width: 215px;
+      margin: 0;
+      padding: 9px;
+      font-size: 12px;
+      line-height: 12px;
+      text-align: center;
+      color: $white;
+      background-color: $black;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: 55px;
+    }
+  }
+
+  &--profile .modal__tab {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
+  &--opened {
+    display: block;
+  }
+
+  &__btn {
+    position: absolute;
+    top: -3px;
+    left: 3px;
+    z-index: 1;
+    display: block;
+    width: 26px;
+    height: 22px;
+    font-size: 0;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+
+    @media (min-width: $desktop-width) {
+      top: -14px;
+      left: auto;
+      right: -11px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 0;
+      width: 15px;
+      height: 15px;
+      border-bottom: 1px solid #688cd6;
+      border-left: 1px solid #688cd6;
+      transform: rotate(45deg);
+
+      @media (min-width: $desktop-width) {
+        top: 10px;
+        left: -5px;
+        width: 31px;
+        height: 1px;
+        background-color: $black;
+        border: 0;
+        transform: rotate(-45deg);
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: -2px;
+      width: 26px;
+      height: 1px;
+      background-color: #688cd6;
+
+      @media (min-width: $desktop-width) {
+        top: 10px;
+        left: -5px;
+        width: 31px;
+        height: 1px;
+        background-color: $black;
+        border: 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+    padding-left: 41px;
+    margin-bottom: 34px;
+
+    @include font-set(16px, 16px, 500, #123885, left);
+
+    @media (min-width: $desktop-width) {
+      padding-left: 9px;
+      margin-right: 27px;
+      margin-bottom: 31px;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 30px;
     }
   }
 
@@ -73,17 +171,37 @@
     width: 100%;
     min-height: 32px;
     margin: 0;
+
+    @media (min-width: $tablet-width) {
+      align-self: baseline;
+      margin-left: auto;
+      width: 65%;
+    }
+
+    @media (min-width: $desktop-width) {
+      align-self: baseline;
+      margin-left: 0;
+      width: 41%;
+    }
   }
 
   &__tab {
+    box-sizing: border-box;
     display: block;
     flex-grow: 1;
     border: 1px solid #97adef;
     cursor: pointer;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding: 3px;
+
 
     @include font-set(12px, 12px, normal, $blue-btn, center);
+
+    @media (min-width: $desktop-width) {
+      font-size: 14px;
+      line-height: 14px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
 
     &--active,
     &:hover {
@@ -108,11 +226,26 @@
   &__header {
     position: relative;
     margin-bottom: 29px;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      flex-direction: row;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__error {
+    padding: 25px;
+    background-color: $dirtywhite;
+
+    @include font-set(14px, 18px, normal, $black, center);
   }
 
   &__help {
     visibility: hidden;
-    display: block;
     position: absolute;
     left: 0;
     bottom: 17px;
@@ -122,17 +255,34 @@
     @include font-set(12px, 14px, normal, $white, center);
     width: 208px;
 
+    @media (min-width: $desktop-width) {
+      left: 7px;
+      bottom: -17px;
+    }
+
     &::after {
       content: "";
       position: absolute;
       top: -16px;
-      right: 36px;
+      right: 12px;
       border: solid 9px transparent;
       border-bottom: 7px solid $black;
     }
   }
 }
 
-.modal__title:hover .modal__help {
+@media (min-width: $desktop-width) {
+  .modal--feedback .modal__tabs {
+    width: 419px;
+  }
+
+  .modal--feedback .modal__tab {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+.modal__title::before:hover .modal__help {
   visibility: visible;
 }
+

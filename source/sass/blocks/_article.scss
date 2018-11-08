@@ -22,6 +22,7 @@
 
   &__description {
     margin: 0;
+    width: 100%;
 
     @include font-set(14px, 18px, normal, $deepgrey, left);
 
